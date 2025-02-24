@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "math",
+        "question": "Compute $54 \\times 46$ in your head.",
+        "solution": "We can use the fact that $54 \\times 46 = (50 + 4)(50 - 4)$, and use the difference of squares to obtain $54 \\times 46 = 2500 - 16 = \\boxed{2484}.$\n\nThe answer is 2484."
+    },
+    {
+        "dataset": "math",
+        "question": "If $|x-2|=p$, where $x<2$, then what is $x-p$ in terms of $p$?",
+        "solution": "Since $|x-2|=p$, then $x-2=p$ or $x-2=-p$.  Since $x<2$, then $x-2=-p$.  Thus, $x=2-p$ and $x-p=2-p-p=2-2p$.\n\nThe answer is $\\boxed{2-2p}$."
+    },
+    {
+        "dataset": "math",
+        "question": "Mr. Mendez awards extra credit on quizzes to his students with quiz grades that exceed the class mean. Given that 107 students take the same quiz, what is the largest number of students who can be awarded extra credit?",
+        "solution": "The mean of a set of n numbers is the sum of the numbers divided by n.  Since the mean is always at least as large as the smallest number, at most n \u2013 1 numbers can exceed the mean.  Therefore, at most 107 \u2013 1 = 106 students can be awarded extra credit.\n\nThe answer is 106."
+    },
+    {
+        "dataset": "math",
+        "question": "Let $P$ be the point on line segment $\\overline{AB}$ such that $AP:PB = 2:7.$  Then\n\\[\\overrightarrow{P} = t \\overrightarrow{A} + u \\overrightarrow{B}\\]for some constants $t$ and $u.$  Enter the ordered pair $(t,u).$\n\n[asy]\nunitsize(1 cm);\n\npair A, B, P;\n\nA = (0,0);\nB = (5,1);\nP = interp(A,B,2/9);\n\ndraw(A--B);\n\ndot(\"$A$\", A, S);\ndot(\"$B$\", B, S);\ndot(\"$P$\", P, S);\n[/asy]",
+        "solution": "We have that $\\overrightarrow{P} = \\frac{7}{2+7}\\overrightarrow{A} + \\frac{2}{2+7}\\overrightarrow{B}$, so $(t,u) = \\left(\\frac{7}{9},\\frac{2}{9}\\right).$\n\nThe answer is $\\boxed{\\left(\\frac{7}{9},\\frac{2}{9}\\right)}$."
+    },
+    {
+        "dataset": "math",
+        "question": "When a polynomial is divided by $2x^2 - 7x + 18,$ what are the possible degrees of the remainder?  Enter all the possible values, separated by commas.",
+        "solution": "Step 1: The degree of the remainder of the division of two polynomials is less than the degree of the divisor. In this case, the divisor is a quadratic polynomial (a polynomial of degree 2), so the remainder must be of degree less than 2.\n\nStep 2: This means the remainder can be either a constant (degree 0) or a linear polynomial (degree 1).\n\nStep 3: Therefore, the possible degrees of the remainder are 0 and 1.\n\nThe answer is $\\boxed{0,1}$"
+    },
+    {
+        "dataset": "math",
+        "question": "The number $n$ is a prime number between 20 and 30. If you divide $n$ by 8, the remainder is 5. What is the value of $n$?",
+        "solution": "Step 1: Identify the prime numbers between 20 and 30. The prime numbers in this range are 23 and 29.\n\nStep 2: Check if the remainder is 5 when each of the prime numbers is divided by 8. For 23: 23 \u00f7 8 = 2 remainder 7. For 29: 29 \u00f7 8 = 3 remainder 5.\n\nStep 3: Determine which number is the value of n. The remainder of 5 when divided by 8 corresponds to the number 29.\n\nThe answer is 29."
+    },
+    {
+        "dataset": "math",
+        "question": "Three faces of a right rectangular prism have areas of 48, 49 and 50 square units. What is the volume of the prism, in cubic units? Express your answer to the nearest whole number.",
+        "solution": "Let the dimensions of the rectangular prism be $a$, $b$, and $c$. Then, the given areas tell us that $ab=48$, $ac=49$, and $bc=50$.\n\nMultiplying these equations, we get $(abc)^{2}=48\\cdot49\\cdot50$. Solving for $abc$, we have $abc=\\pm\\sqrt{117600}=\\pm 342.9$.\n\nSince $abc$ must be a positive value, we take the positive square root. Therefore, the volume of the prism is approximately $\\boxed{343}$ cubic units.\n\nThe answer is $\\boxed{343}$."
+    },
+    {
+        "dataset": "math",
+        "question": "A circular dartboard is divided into regions with various central angles, as shown. The probability of a dart randomly landing in a particular region is $\\frac16$. What is the corresponding measure, in degrees, of the central angle of this section of the dartboard? [asy]\nunitsize(1.5cm);\ndefaultpen(linewidth(.7pt));\n\npair O=(0,0);\ndraw(Circle(O,1));\ndraw(dir(0)--O--dir(90));\ndraw(dir(150)--O--dir(225));\n[/asy]",
+        "solution": "Step 1:  To begin with, we need to understand that the probability of the dart landing in a particular region is the ratio of the area of that region to the total area of the dartboard.\nStep 2:  The total area of the dartboard is given by the formula for the area of a circle, which is $\\pi r^2$, where $r$ is the radius of the circle.\nStep 3:  The probability of the dart landing in a particular region is given as $\\frac{1}{6}$, so we can set up the equation $\\frac{\\theta}{360}=\\frac{1}{6}$, where $\\theta$ is the measure of the central angle of the region in degrees.\nStep 4:  We can then solve for $\\theta$ by multiplying both sides of the equation by $360$ to isolate $\\theta$, which gives us $\\theta=\\frac{1}{6}\\cdot360=60$ degrees.\nStep 5:  Therefore, the corresponding measure of the central angle of this section of the dartboard is $60$ degrees.\n\nThe answer is $\\boxed{60}$."
+    }
+]

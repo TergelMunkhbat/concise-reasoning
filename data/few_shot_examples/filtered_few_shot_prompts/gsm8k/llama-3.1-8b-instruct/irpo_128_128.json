@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "gsm8k",
+        "question": "There were 40 kids on Lake Pleasant. A fourth of the kids went tubing, but only half of the tubers went rafting. How many of the kids who joined the rafting excursion were also on the tubing excursion?",
+        "solution": "To find out how many kids were on the tubing excursion, we need to calculate a fourth of 40, which is 40 \u00f7 4 = 10.\n\nSince only half of the tubers went rafting, we need to find half of 10, which is 10 \u00f7 2 = 5.\n\nTherefore, the answer is 5.\n\nThe answer is 5."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Barry stands on his head for 10 minutes at a time, but then he must sit for 5 minutes before he can take another turn standing on his head.  How many turns can Barry take standing on his head during a single 2-hour period?",
+        "solution": "To find out how many turns Barry can take standing on his head, we need to determine how many 15-minute blocks are in a 2-hour period. \n\nA 2-hour period is equal to 120 minutes. \n\nWe divide the total number of minutes (120) by the time it takes for each turn (15 minutes). \n\n120 / 15 = 8\n\nThe answer is 8"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Brandon can catch 6 squirrels or two rabbits in 1 hour. Each squirrel has 300 calories and each rabbit has 800 calories. How many more calories will he get per hour if he catches squirrels instead of rabbits?",
+        "solution": "To find the difference in calories per hour, we first need to calculate the total calories Brandon gets from catching squirrels and rabbits.\n\nCatching 6 squirrels gives Brandon 6 x 300 = 1800 calories.\n\nCatching 2 rabbits gives Brandon 2 x 800 = 1600 calories.\n\nThe difference in calories is 1800 - 1600 = 200.\n\nThe answer is 200."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Mehki is 10 years older than Jordyn. Jordyn's age is double Zrinka's age. If Zrinka is 6 years old, how many years old is Mehki?",
+        "solution": "Let's break it down step by step:\n\n1. Zrinka is 6 years old.\n2. Jordyn's age is double Zrinka's age, so Jordyn is 2 x 6 = 12 years old.\n3. Mehki is 10 years older than Jordyn, so Mehki's age is 12 + 10 = 22 years old.\n\nThe answer is 22."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "By the time Anne is two times as old as Emile, Emile will be six times as old as Maude. If Maude will be 8 years old, how old will Anne be?",
+        "solution": "Let's break this problem down step by step:\n\n1. We know that Maude will be 8 years old.\n2. Emile will be six times as old as Maude, so Emile will be 6 x 8 = 48 years old.\n3. Anne will be two times as old as Emile, so Anne will be 2 x 48 = 96 years old.\n\nThe answer is 96."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Maynard's dog dug 8 holes in the lawn.  Maynard filled in 75% of the hole with dirt.  How many holes remain unfilled?",
+        "solution": "To find the number of holes that remain unfilled, we need to first find the number of holes that Maynard filled.\n\nMaynard filled 75% of the holes. 75% of 8 holes is 0.75 x 8 = 6 holes.\n\nSince Maynard filled 6 holes, the number of holes that remain unfilled is 8 - 6 = 2 holes.\n\nThe answer is 2."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Purple Valley has one-quarter as many skirts as Seafoam Valley, and Seafoam Valley has two-thirds as many skirts as Azure Valley. If Azure Valley has 60 skirts, how many skirts does Purple Valley have?",
+        "solution": "Let's break down the problem step by step:\n\n1. Azure Valley has 60 skirts.\n2. Seafoam Valley has two-thirds as many skirts as Azure Valley, which means they have (2/3) \u00d7 60 = 40 skirts.\n3. Purple Valley has one-quarter as many skirts as Seafoam Valley, which means they have (1/4) \u00d7 40 = 10 skirts.\n\nThe answer is 10"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "A pie shop charges $5 for a slice of pie. They cut each whole pie into 4 slices. How much money will the pie shop make if they sell 9 pies?",
+        "solution": "To find the total amount of money the pie shop will make, we need to first find out how many slices of pie they will sell. Since they cut each pie into 4 slices and they sell 9 pies, they will sell a total of 9 x 4 = 36 slices.\n\nSince each slice costs $5, the total amount of money they will make is 36 x $5 = $180.\n\nThe answer is $180."
+    }
+]

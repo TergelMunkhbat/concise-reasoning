@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "math",
+        "question": "What number is a multiple of every integer?",
+        "solution": " The number that is a multiple of every integer is 0. This is because 0 multiplied by any integer is always 0."
+    },
+    {
+        "dataset": "math",
+        "question": "Below is the graph of $y = a \\sin (bx + c) + d$ for some positive constants $a,$ $b,$ $c,$ and $d.$  Find $b.$\n\n[asy]import TrigMacros;\n\nsize(400);\n\nreal f(real x)\n{\n\treturn 2*sin(3*x + pi) + 1;\n}\n\ndraw(graph(f,-3*pi,3*pi,n=700,join=operator ..),red);\ntrig_axes(-3*pi,3*pi,-4,4,pi/2,1);\nlayer();\nrm_trig_labels(-5,5, 2);\n\nlabel(\"$1$\", (0,1), E);\nlabel(\"$2$\", (0,2), E);\nlabel(\"$3$\", (0,3), E);\nlabel(\"$-1$\", (0,-1), E);\nlabel(\"$-2$\", (0,-2), E);\nlabel(\"$-3$\", (0,-3), E);\n[/asy]",
+        "solution": " The graph has a period of $2\\pi/3$, so $b = \\boxed{3}$."
+    },
+    {
+        "dataset": "math",
+        "question": "The number $n$ is a prime number between 20 and 30. If you divide $n$ by 8, the remainder is 5. What is the value of $n$?",
+        "solution": " The prime numbers between 20 and 30 are 23, 29.\n\nIf we divide these numbers by 8, the remainders are 7 and 5 respectively.\n\nTherefore, the value of $n$ is $\\boxed{29}$.\nThe answer is $\\boxed{29}$."
+    },
+    {
+        "dataset": "math",
+        "question": "When a polynomial is divided by $2x^2 - 7x + 18,$ what are the possible degrees of the remainder?  Enter all the possible values, separated by commas.",
+        "solution": " The degree of the remainder is at most one less than the degree of the divisor. So the possible degrees of the remainder are 0 and 1.\nThe answer is $\\boxed{0,1}$."
+    },
+    {
+        "dataset": "math",
+        "question": "If $|x-2|=p$, where $x<2$, then what is $x-p$ in terms of $p$?",
+        "solution": " If $x<2$, then $|x-2|=2-x$.\nSo, $2-x=p$, which means $x=2-p$.\nTherefore, $x-p=(2-p)-p=2-2p$.\nThe answer is $\\boxed{2-2p}$."
+    },
+    {
+        "dataset": "math",
+        "question": "What is the value of $\\displaystyle\\frac{109^2-100^2}{9}$?",
+        "solution": " Using the difference of squares formula, we have $\\displaystyle\\frac{109^2-100^2}{9}=\\frac{(109+100)(109-100)}{9}=\\frac{209\\cdot9}{9}=209$.\nThe answer is $\\boxed{209}$."
+    },
+    {
+        "dataset": "math",
+        "question": "A section is cut out of a circular piece of paper having radius four inches, as shown. Points A and B are then glued together to form a right circular cone. What is the circumference of the base of the resulting cone? Express your answer in terms of $\\pi$.  (The $270^\\circ$ sector forms the cone.)\n\n[asy]import graph;\ndraw(Circle((0,0),42.4),linewidth(1));\ndraw((0,0)--(30,30),linewidth(2));\ndraw((0,0)--(30,-30),linewidth(2));\nlabel(\"$A$\",(30,30),E);\nlabel(\"$B$\",(30,-30),E);\nlabel(\"4''\",(15,15),NW);\ndraw((3,3)--(6,0));\ndraw((6,0)--(3,-3));\n\n[/asy]",
+        "solution": " The circumference of the original circle is $2\\pi(4)=8\\pi$.  Since the $270^\\circ$ sector is what forms the cone, the circumference of the base of the cone is $\\frac{270}{360}(8\\pi)=\\boxed{6\\pi}$."
+    },
+    {
+        "dataset": "math",
+        "question": "A circular dartboard is divided into regions with various central angles, as shown. The probability of a dart randomly landing in a particular region is $\\frac16$. What is the corresponding measure, in degrees, of the central angle of this section of the dartboard? [asy]\nunitsize(1.5cm);\ndefaultpen(linewidth(.7pt));\n\npair O=(0,0);\ndraw(Circle(O,1));\ndraw(dir(0)--O--dir(90));\ndraw(dir(150)--O--dir(225));\n[/asy]",
+        "solution": " The probability of a dart landing in a particular region is proportional to the central angle of that region. Since the sum of the central angles of a circle is $360^\\circ$, the central angle of this section of the dartboard is $\\frac16 \\times 360^\\circ = 60^\\circ$."
+    }
+]

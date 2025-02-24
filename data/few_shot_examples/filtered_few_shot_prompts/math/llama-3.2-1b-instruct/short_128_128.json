@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "math",
+        "question": "Compute $(-64)\\div (-32)$.",
+        "solution": "First, divide -64 by -32. The result of this division is 2."
+    },
+    {
+        "dataset": "math",
+        "question": "A circular dartboard is divided into regions with various central angles, as shown. The probability of a dart randomly landing in a particular region is $\\frac16$. What is the corresponding measure, in degrees, of the central angle of this section of the dartboard? [asy]\nunitsize(1.5cm);\ndefaultpen(linewidth(.7pt));\n\npair O=(0,0);\ndraw(Circle(O,1));\ndraw(dir(0)--O--dir(90));\ndraw(dir(150)--O--dir(225));\n[/asy]",
+        "solution": "The dartboard is a circle with 360 degrees. If it is divided into 6 sections, each section covers 60 degrees. So each section has a central angle of 60 degrees."
+    },
+    {
+        "dataset": "math",
+        "question": "Sixteen is 64$\\%$ of what number?",
+        "solution": "The number we are looking for is 16 \u00f7 0.64 = 25. \n\nThe answer is 25."
+    },
+    {
+        "dataset": "math",
+        "question": "The sum of the squares of two positive integers is 90. The product of the two integers is 27. What is the sum of the two integers?",
+        "solution": "The two integers are 3 and 9 because 3 squared is 9 and 3 times 9 is 27. The sum of 3 and 9 is 12."
+    },
+    {
+        "dataset": "math",
+        "question": "If $\\|\\mathbf{v}\\| = 4,$ then find $\\mathbf{v} \\cdot \\mathbf{v}.$",
+        "solution": "$\\mathbf{v} \\cdot \\mathbf{v} = \\|\\mathbf{v}\\|^2 = 4^2 = 16$"
+    },
+    {
+        "dataset": "math",
+        "question": "One more than $11$ times a certain prime $p$ is another prime $q$. What is the value of $q$?",
+        "solution": "The prime number is 2. \n\n11 times 2 is 22. \n\nOne more than 22 is 23. \n\nThe answer is 23."
+    },
+    {
+        "dataset": "math",
+        "question": "The function $f(x)$ takes positive real numbers to real numbers, such that\n\\[xf(y) - yf(x) = f \\left( \\frac{x}{y} \\right)\\]for all positive real numbers $x$ and $y.$  Find all possible values of $f(100).$  Enter all possible values, separated by commas.",
+        "solution": "We can let $x = y = 100$ in the given equation. This gives\n\\[0 = f(100).\\]\nThe answer is 0."
+    },
+    {
+        "dataset": "math",
+        "question": "A section is cut out of a circular piece of paper having radius four inches, as shown. Points A and B are then glued together to form a right circular cone. What is the circumference of the base of the resulting cone? Express your answer in terms of $\\pi$.  (The $270^\\circ$ sector forms the cone.)\n\n[asy]import graph;\ndraw(Circle((0,0),42.4),linewidth(1));\ndraw((0,0)--(30,30),linewidth(2));\ndraw((0,0)--(30,-30),linewidth(2));\nlabel(\"$A$\",(30,30),E);\nlabel(\"$B$\",(30,-30),E);\nlabel(\"4''\",(15,15),NW);\ndraw((3,3)--(6,0));\ndraw((6,0)--(3,-3));\n\n[/asy]",
+        "solution": "The circumference of the base of the resulting cone is equal to the length of the arc of the sector formed by the cut-out section. The arc length of the sector is $\\frac{270}{360} \\times 2\\pi \\times 4 = 6\\pi$ inches. The answer is $6\\pi$."
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "gsm8k",
+        "question": "Mehki is 10 years older than Jordyn. Jordyn's age is double Zrinka's age. If Zrinka is 6 years old, how many years old is Mehki?",
+        "solution": "To determine Mehki's age, we need to follow the information given step by step.\n\n1. We know that Zrinka is 6 years old.\n2. Jordyn's age is double Zrinka's age. Therefore, Jordyn's age is \\(2 \\times 6 = 12\\) years old.\n3. Mehki is 10 years older than Jordyn. Therefore, Mehki's age is \\(12 + 10 = 22\\) years old.\n\nSo, the answer is \\(\\boxed{22}\\)."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Nathaniel has 11 tickets to a basketball game. He gives away 2 tickets each to his best friends, until he only has 3 tickets left. How many best friends does Nathaniel have?",
+        "solution": "Let's start by determining how many tickets Nathaniel gives away. Initially, Nathaniel has 11 tickets. After giving away some tickets, he has 3 tickets left. Therefore, the number of tickets he gives away is:\n\n\\[ 11 - 3 = 8 \\]\n\nNext, we need to find out how many best friends Nathaniel has. Since he gives 2 tickets to each best friend, we divide the total number of tickets given away by 2:\n\n\\[ \\frac{8}{2} = 4 \\]\n\nSo, Nathaniel has \\(\\boxed{4}\\) best friends."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Morgan goes to the drive-thru and orders his lunch.  He gets a hamburger for $4, onion rings for $2 and a smoothie for $3. If he pays with a $20 bill, how much change does he receive?",
+        "solution": "To determine how much change Morgan receives, we need to follow these steps:\n\n1. **Calculate the total cost of the items ordered:**\n   - Hamburger: $4\n   - Onion rings: $2\n   - Smoothie: $3\n\n   Total cost = $4 + $2 + $3 = $9\n\n2. **Subtract the total cost from the amount Morgan paid:**\n   - Amount paid: $20\n   - Total cost: $9\n\n   Change = $20 - $9 = $11\n\nTherefore, Morgan receives \\boxed{11} dollars in change."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "By the time Anne is two times as old as Emile, Emile will be six times as old as Maude. If Maude will be 8 years old, how old will Anne be?",
+        "solution": "To determine Anne's age when the conditions of the problem are met, we need to break down the information step by step.\n\n1. Identify the ages at the future time when the conditions are met:\n   - Maude will be 8 years old.\n   - Emile will be six times as old as Maude, so Emile will be \\(6 \\times 8 = 48\\) years old.\n   - Anne will be two times as old as Emile, so Anne will be \\(2 \\times 48 = 96\\) years old.\n\nThus, Anne will be \\(\\boxed{96}\\) years old."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Twelve coworkers go out for lunch together and order three pizzas. Each pizza is cut into eight slices. If each person gets the same number of slices, how many slices will each person get?",
+        "solution": "To determine how many slices of pizza each person gets, we can follow these steps:\n\n1. Calculate the total number of pizza slices available.\n   - Each pizza is cut into 8 slices, and there are 3 pizzas.\n   - Therefore, the total number of slices is \\(3 \\times 8 = 24\\).\n\n2. Determine how many slices each person gets.\n   - There are 12 coworkers, and they need to share the 24 slices equally.\n   - So, each person gets \\(24 \\div 12 = 2\\) slices.\n\nThus, each person gets \\(\\boxed{2}\\) slices."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Tim owns rental properties.  He decides to replace all the locks and needs to get 3 keys per lock.  He owns two apartment complexes which each have 12 apartments.  How many keys does he need to make?",
+        "solution": "To determine the total number of keys Tim needs to make, we can break down the problem step by step.\n\n1. Identify the number of apartments in each complex: Each apartment complex has 12 apartments.\n2. Determine the total number of apartments: Since Tim owns two apartment complexes, the total number of apartments is \\(12 \\times 2 = 24\\).\n3. Calculate the number of keys needed: Since Tim needs 3 keys per lock, the total number of keys needed is \\(24 \\times 3 = 72\\).\n\nSo, the total number of keys Tim needs to make is \\(\\boxed{72}\\)."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Maynard's dog dug 8 holes in the lawn.  Maynard filled in 75% of the hole with dirt.  How many holes remain unfilled?",
+        "solution": "To determine how many holes remain unfilled, we start with the total number of holes dug by Maynard's dog, which is 8. Maynard filled in 75% of these holes with dirt. Therefore, the number of holes filled in is calculated as follows:\n\n\\[ 8 \\times 0.75 = 6 \\]\n\nThis means that Maynard filled in 6 holes. To find out how many holes remain unfilled, we subtract the number of filled holes from the total number of holes:\n\n\\[ 8 - 6 = 2 \\]\n\nThus, the number of holes that remain unfilled is \\(\\boxed{2}\\)."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "The teacher divided the students into four groups. One group had 5 students, another 8 students, and the third 7 students. If there were 24 total students, how many students were in the fourth group?",
+        "solution": "To determine the number of students in the fourth group, we need to follow these steps:\n\n1. Identify the total number of students in the first three groups.\n2. Subtract the total number of students in the first three groups from the overall total number of students to find the number of students in the fourth group.\n\nFirst, we add the number of students in the first three groups:\n\\[ 5 + 8 + 7 = 20 \\]\n\nNext, we subtract the total number of students in the first three groups from the overall total number of students:\n\\[ 24 - 20 = 4 \\]\n\nTherefore, the number of students in the fourth group is \\(\\boxed{4}\\)."
+    }
+]

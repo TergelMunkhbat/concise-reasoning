@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "gsm8k",
+        "question": "Morgan goes to the drive-thru and orders his lunch.  He gets a hamburger for $4, onion rings for $2 and a smoothie for $3. If he pays with a $20 bill, how much change does he receive?",
+        "solution": "To determine how much change Morgan receives, we need to follow these steps:\n\n1. Calculate the total cost of Morgan's lunch:\n   - Hamburger: $4\n   - Onion rings: $2\n   - Smoothie: $3\n   \n   Total cost = $4 + $2 + $3 = $9\n\n2. Subtract the total cost from the amount Morgan paid:\n   - Amount paid: $20\n   - Total cost: $9\n   \n   Change received = $20 - $9 = $11\n\nTherefore, The answer is $11."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Mehki is 10 years older than Jordyn. Jordyn's age is double Zrinka's age. If Zrinka is 6 years old, how many years old is Mehki?",
+        "solution": "Let's break down the information provided in the question and solve it step by step:\n\n1. We know that Zrinka is 6 years old.\n2. Jordyn's age is double Zrinka's age. Therefore, Jordyn's age = 2 * Zrinka's age = 2 * 6 = 12 years old.\n3. Mehki is 10 years older than Jordyn. Therefore, Mehki's age = Jordyn's age + 10 = 12 + 10 = 22 years old.\n\nThe answer is The answer is Mehki is 22 years old."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Fred spent half of his allowance going to the movies. He washed the family car and earned 6 dollars. What is his weekly allowance if he ended with 14 dollars?",
+        "solution": "To solve this problem, we need to work backwards from the final amount Fred has and account for all his transactions. Let's break it down step-by-step:\n\n1. Fred ended up with $14.\n2. Before earning $6 from washing the car, he had \\(14 - 6 = 8\\) dollars.\n3. The $8 represents the remaining half of his allowance after spending half on the movies.\n4. Therefore, before spending half on the movies, Fred must have had \\(8 \\times 2 = 16\\) dollars.\n\nThus, Fred's weekly allowance was $16.\n\nThe answer is The answer is $16"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Ines had $20 in her purse. She bought 3 pounds of peaches, which are $2 per pound at the local farmers\u2019 market. How much did she have left?",
+        "solution": "To solve this problem, let's break it down into steps:\n\n1. Determine the cost of the peaches:\n   - The price of peaches is $2 per pound.\n   - Ines bought 3 pounds of peaches.\n   - Therefore, the total cost for the peaches = 3 pounds * $2/pound = $6.\n\n2. Calculate how much money Ines has left after purchasing the peaches:\n   - Ines initially had $20.\n   - She spent $6 on peaches.\n   - Money left = Initial amount - Cost of peaches = $20 - $6 = $14.\n\nThe answer is $14"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Mrs. Petersons bought 10 tumblers for $45 each. She paid with five $100 bills. How much change will Mrs. Petersons receive?",
+        "solution": "To solve this problem, let's break it down into steps:\n\n1. Calculate the total cost of the tumblers:\n   Mrs. Peterson bought 10 tumblers at $45 each.\n   Total cost = 10 * $45 = $450\n\n2. Determine the amount of money Mrs. Peterson paid:\n   She paid with five $100 bills.\n   Total payment = 5 * $100 = $500\n\n3. Calculate the change she should receive:\n   Change = Total payment - Total cost\n   Change = $500 - $450 = $50\n\nTherefore, The answer is $50."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "There were 40 kids on Lake Pleasant. A fourth of the kids went tubing, but only half of the tubers went rafting. How many of the kids who joined the rafting excursion were also on the tubing excursion?",
+        "solution": "To solve this problem, let's break it down step by step:\n\n1. **Determine the number of kids who went tubing:**\n   - There were 40 kids in total.\n   - A fourth of the kids went tubing.\n   - Calculation: \\( \\frac{1}{4} \\times 40 = 10 \\) kids.\n\n2. **Determine how many of these tubing kids also went rafting:**\n   - Only half of the kids who went tubing participated in rafting.\n   - Calculation: \\( \\frac{1}{2} \\times 10 = 5 \\) kids.\n\nTherefore, the answer is The answer is 5 kids."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Cooper makes 7 apple pies a day. He does this for 12 days. Ashley then eats 50 of his pies. How many apple pies remain with Cooper?",
+        "solution": "To solve this problem, we need to follow these steps:\n\n1. **Calculate the total number of apple pies Cooper initially makes**: \n   - Cooper makes 7 apple pies per day.\n   - He does this for 12 days.\n   - Total pies = Pies per day * Number of days = 7 * 12 = 84 pies.\n\n2. **Account for the pies eaten by Ashley**:\n   - Ashley eats 50 of Cooper's pies.\n   - Remaining pies = Initial pies - Pies eaten = 84 - 50 = 34 pies.\n\nTherefore, the final answer is:\nThe answer is 34 apple pies remain with Cooper."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Tim owns rental properties.  He decides to replace all the locks and needs to get 3 keys per lock.  He owns two apartment complexes which each have 12 apartments.  How many keys does he need to make?",
+        "solution": "To determine how many keys Tim needs to make, we'll break down the problem into steps:\n\n1. **Calculate the total number of apartments:** \n   - Tim owns two apartment complexes.\n   - Each complex has 12 apartments.\n   - Total apartments = 2 complexes \u00d7 12 apartments/complex = 24 apartments.\n\n2. **Determine the number of keys needed for all apartments:**\n   - For each apartment, Tim needs 3 keys.\n   - Total keys needed = 24 apartments \u00d7 3 keys/apartment = 72 keys.\n\nTherefore, the total number of keys Tim needs to make is 72 keys.\n\nThe answer is 72 keys."
+    }
+]

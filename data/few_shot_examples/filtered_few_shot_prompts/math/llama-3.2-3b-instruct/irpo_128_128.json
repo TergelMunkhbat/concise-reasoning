@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "math",
+        "question": "Find one-fourth of 6 times 8.",
+        "solution": "To solve this problem, I will follow the order of operations (PEMDAS):\n\n1. Multiply 6 and 8:\n6 \u00d7 8 = 48\n2. Divide the result by 4:\n48 \u00f7 4 = 12\n\nTherefore, one-fourth of 6 times 8 is 12."
+    },
+    {
+        "dataset": "math",
+        "question": "Sixteen is 64$\\%$ of what number?",
+        "solution": "Step 1: Let's assume the number we are looking for is x.\nStep 2: We know that 64% of x is equal to 16, so we can set up the equation: 0.64x = 16\nStep 3: To solve for x, we need to isolate x by dividing both sides of the equation by 0.64.\n\nThe answer is 25"
+    },
+    {
+        "dataset": "math",
+        "question": "Compute $54 \\times 46$ in your head.",
+        "solution": "To compute $54 \\times 46$ in my head, I'll use the formula $(a+b)(a-b) = a^2 - b^2$. \n\nLet $a = 50$ and $b = 4$. \n\nThen, $54 \\times 46 = (50+4)(50-4) = 50^2 - 4^2 = 2500 - 16 = 2484$.\n\nThe answer is 2484."
+    },
+    {
+        "dataset": "math",
+        "question": "When a polynomial is divided by $2x^2 - 7x + 18,$ what are the possible degrees of the remainder?  Enter all the possible values, separated by commas.",
+        "solution": "## Step 1: Recall the division algorithm for polynomials.\nWhen a polynomial $f(x)$ is divided by another polynomial $g(x),$ the remainder must be of degree less than $g(x).$\n\n## Step 2: Determine the degree of the divisor.\nThe degree of $2x^2 - 7x + 18$ is $2.$\n\n## Step 3: Determine the possible degrees of the remainder.\nSince the remainder must be of degree less than $2,$ the possible degrees of the remainder are $0$ and $1.$\n\nThe final answer is: $\\boxed{0,1}$"
+    },
+    {
+        "dataset": "math",
+        "question": "If $\\|\\mathbf{v}\\| = 4,$ then find $\\mathbf{v} \\cdot \\mathbf{v}.$",
+        "solution": "## Step 1: Recall the definition of the dot product\nThe dot product of a vector with itself is equal to the square of the magnitude of the vector.\n\n## Step 2: Use the definition to set up the equation\n$\\mathbf{v} \\cdot \\mathbf{v} = \\|\\mathbf{v}\\|^2$\n\n## Step 3: Plug in the given magnitude\n$\\mathbf{v} \\cdot \\mathbf{v} = 4^2$\n\n## Step 4: Simplify the equation\n$\\mathbf{v} \\cdot \\mathbf{v} = 16$\n\nThe final answer is: $\\boxed{16}$"
+    },
+    {
+        "dataset": "math",
+        "question": "A circular dartboard is divided into regions with various central angles, as shown. The probability of a dart randomly landing in a particular region is $\\frac16$. What is the corresponding measure, in degrees, of the central angle of this section of the dartboard? [asy]\nunitsize(1.5cm);\ndefaultpen(linewidth(.7pt));\n\npair O=(0,0);\ndraw(Circle(O,1));\ndraw(dir(0)--O--dir(90));\ndraw(dir(150)--O--dir(225));\n[/asy]",
+        "solution": "## Step 1: The dartboard is a circle, and the probability of the dart landing in a particular region is given as $\\frac{1}{6}$.\nThe entire circle is $360^\\circ$, and the probability of the dart landing in a particular region is $\\frac{1}{6}$.\n\n## Step 2: We can set up a proportion to find the measure of the central angle of the section of the dartboard.\nLet $x$ be the measure of the central angle of the section of the dartboard. We can set up the proportion $\\frac{x}{360^\\circ} = \\frac{1}{6}$.\n\n## Step 3: To solve for $x$, we can cross multiply and simplify the equation.\nCross multiplying, we get $6x = 360^\\circ$. Dividing both sides by $6$, we get $x = 60^\\circ$.\n\nThe final answer is: $\\boxed{60}$"
+    },
+    {
+        "dataset": "math",
+        "question": "Three faces of a right rectangular prism have areas of 48, 49 and 50 square units. What is the volume of the prism, in cubic units? Express your answer to the nearest whole number.",
+        "solution": "To find the volume of the rectangular prism, let's denote the length, width, and height of the prism as l, w, and h, respectively.\n\nSince the prism is a right rectangular prism, we can set up equations based on the areas of its faces. The three faces are:\n\nlw = 48\nlh = 49\nwh = 50\n\nWe can multiply these three equations together to get:\n\n(lw)(lh)(wh) = 48*49*50\nl^2w^2h^2 = 117600\n\nNow, we can take the square root of both sides to get:\n\nlwh = \u221a117600 \u2248 342.93\n\nSo, the volume of the prism is approximately 343 cubic units."
+    },
+    {
+        "dataset": "math",
+        "question": "One more than $11$ times a certain prime $p$ is another prime $q$. What is the value of $q$?",
+        "solution": "## Step 1: Understand the problem statement\nWe are looking for a prime number $p$ such that $11p + 1$ is also a prime number $q$.\n\n## Step 2: Start testing values of p\nThe smallest prime number is 2, so we start with that and check if $11 \\times 2 + 1 = 23$ is a prime number.\n\n## Step 3: Check if 23 is prime\n23 is indeed a prime number because it is divisible only by 1 and itself, which are 23 and 23.\n\n## Step 4: Since 23 is prime, we found our value of q\nTherefore, $q = 23$.\n\nThe final answer is: $\\boxed{23}$"
+    }
+]

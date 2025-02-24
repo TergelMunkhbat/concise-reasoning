@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "math",
+        "question": "Find one-fourth of 6 times 8.",
+        "solution": "To find one-fourth of 6 times 8, we can break down the problem into smaller steps.\n\nFirst, we need to calculate 6 times 8:\n\\[ 6 \\times 8 = 48 \\]\n\nNext, we need to find one-fourth of 48. This means we divide 48 by 4:\n\\[ \\frac{48}{4} = 12 \\]\n\nSo, the answer is:\n\\[ \\boxed{12} \\]"
+    },
+    {
+        "dataset": "math",
+        "question": "What is $\\frac{1}{4}\\%$ of 120? Express your answer as a decimal.",
+        "solution": "To find \\(\\frac{1}{4}\\%\\) of 120, we need to follow these steps:\n\n1. Convert \\(\\frac{1}{4}\\%\\) to a decimal. Recall that \\(1\\% = 0.01\\), so \\(\\frac{1}{4}\\% = \\frac{1}{4} \\times 0.01 = 0.0025\\).\n\n2. Now, multiply 120 by 0.0025 to find \\(\\frac{1}{4}\\%\\) of 120.\n   \\[\n   120 \\times 0.0025 = 0.3\n   \\]\n\nTherefore, the answer is \\(\\boxed{0.3}\\)."
+    },
+    {
+        "dataset": "math",
+        "question": "Sixteen is 64$\\%$ of what number?",
+        "solution": "To find the number of which 16 is 64%, we can set up the equation as follows:\n\n\\[ 16 = 0.64 \\times x \\]\n\nHere, \\( x \\) is the number we are trying to find. To isolate \\( x \\), we need to divide both sides of the equation by 0.64:\n\n\\[ x = \\frac{16}{0.64} \\]\n\nNext, we perform the division:\n\n\\[ x = \\frac{16}{0.64} = \\frac{16 \\times 100}{0.64 \\times 100} = \\frac{1600}{64} = 25 \\]\n\nSo, the number is:\n\n\\[ \\boxed{25} \\]"
+    },
+    {
+        "dataset": "math",
+        "question": "A $\\textit{palindrome}$ is a number which reads the same forward as backward. For example, 343 and 1221 are palindromes. What is the least natural number that can be added to 40,305 to create a palindrome?",
+        "solution": "To find the smallest natural number that can be added to 40,305 to create a palindrome, we need to consider the structure of palindromes and how close 40,305 is to the next palindrome.\n\nFirst, let's identify the nearest palindromes greater than 40,305. The next logical candidate is 40,304, but it's not a palindrome. The next candidate is 40,404, which is a palindrome.\n\nNow, we calculate the difference between 40,404 and 40,305:\n\\[ 40,404 - 40,305 = 99 \\]\n\nSo, the smallest natural number that can be added to 40,305 to create a palindrome is \\(\\boxed{99}\\)."
+    },
+    {
+        "dataset": "math",
+        "question": "A circular dartboard is divided into regions with various central angles, as shown. The probability of a dart randomly landing in a particular region is $\\frac16$. What is the corresponding measure, in degrees, of the central angle of this section of the dartboard? [asy]\nunitsize(1.5cm);\ndefaultpen(linewidth(.7pt));\n\npair O=(0,0);\ndraw(Circle(O,1));\ndraw(dir(0)--O--dir(90));\ndraw(dir(150)--O--dir(225));\n[/asy]",
+        "solution": "To determine the measure of the central angle of the section of the dartboard where the probability of a dart landing is \\(\\frac{1}{6}\\), we need to understand that the probability of landing in a particular region is proportional to the measure of the central angle of that region. The total measure of the central angles in a circle is \\(360^\\circ\\).\n\nGiven that the probability of landing in a particular region is \\(\\frac{1}{6}\\), this means that the central angle of this region is \\(\\frac{1}{6}\\) of the total \\(360^\\circ\\).\n\nWe can calculate the central angle as follows:\n\\[\n\\text{Central angle} = \\frac{1}{6} \\times 360^\\circ = 60^\\circ\n\\]\n\nTherefore, the measure of the central angle of this section of the dartboard is \\(\\boxed{60}\\)."
+    },
+    {
+        "dataset": "math",
+        "question": "When a polynomial is divided by $2x^2 - 7x + 18,$ what are the possible degrees of the remainder?  Enter all the possible values, separated by commas.",
+        "solution": "When a polynomial \\(P(x)\\) is divided by a divisor \\(D(x)\\), the division algorithm for polynomials states that there exist unique polynomials \\(Q(x)\\) (the quotient) and \\(R(x)\\) (the remainder) such that\n\n\\[ P(x) = D(x) \\cdot Q(x) + R(x), \\]\n\nwhere the degree of the remainder \\(R(x)\\) is less than the degree of the divisor \\(D(x)\\).\n\nIn this problem, the divisor is \\(2x^2 - 7x + 18\\). The degree of the divisor is 2. Therefore, the degree of the remainder must be less than 2. The possible degrees of the remainder are 0 and 1. A remainder of degree 0 is a constant term, and a remainder of degree 1 is a linear term.\n\nThus, the possible degrees of the remainder are \\(\\boxed{0,1}\\)."
+    },
+    {
+        "dataset": "math",
+        "question": "If $\\|\\mathbf{v}\\| = 4,$ then find $\\mathbf{v} \\cdot \\mathbf{v}.$",
+        "solution": "To find \\(\\mathbf{v} \\cdot \\mathbf{v}\\) given that \\(\\|\\mathbf{v}\\| = 4\\), we start by recalling the relationship between the dot product of a vector with itself and its magnitude. The dot product of a vector \\(\\mathbf{v}\\) with itself is given by:\n\n\\[\n\\mathbf{v} \\cdot \\mathbf{v} = \\|\\mathbf{v}\\|^2\n\\]\n\nGiven that \\(\\|\\mathbf{v}\\| = 4\\), we substitute this value into the equation:\n\n\\[\n\\mathbf{v} \\cdot \\mathbf{v} = 4^2\n\\]\n\nCalculating the square of 4, we get:\n\n\\[\n4^2 = 16\n\\]\n\nTherefore, the value of \\(\\mathbf{v} \\cdot \\mathbf{v}\\) is:\n\n\\[\n\\boxed{16}\n\\]"
+    },
+    {
+        "dataset": "math",
+        "question": "A section is cut out of a circular piece of paper having radius four inches, as shown. Points A and B are then glued together to form a right circular cone. What is the circumference of the base of the resulting cone? Express your answer in terms of $\\pi$.  (The $270^\\circ$ sector forms the cone.)\n\n[asy]import graph;\ndraw(Circle((0,0),42.4),linewidth(1));\ndraw((0,0)--(30,30),linewidth(2));\ndraw((0,0)--(30,-30),linewidth(2));\nlabel(\"$A$\",(30,30),E);\nlabel(\"$B$\",(30,-30),E);\nlabel(\"4''\",(15,15),NW);\ndraw((3,3)--(6,0));\ndraw((6,0)--(3,-3));\n\n[/asy]",
+        "solution": "To determine the circumference of the base of the resulting cone, we need to follow these steps:\n\n1. **Identify the arc length of the sector that forms the cone:**\n   The original circle has a radius of 4 inches. The circumference of the full circle is given by:\n   \\[\n   2\\pi \\times 4 = 8\\pi \\text{ inches}\n   \\]\n   Since the sector is \\(270^\\circ\\) out of \\(360^\\circ\\), the arc length of the sector is:\n   \\[\n   \\frac{270}{360} \\times 8\\pi = \\frac{3}{4} \\times 8\\pi = 6\\pi \\text{ inches}\n   \\]\n   This arc length becomes the circumference of the base of the cone.\n\n2. **Conclusion:**\n   The circumference of the base of the resulting cone is:\n   \\[\n   \\boxed{6\\pi}\n   \\]"
+    }
+]

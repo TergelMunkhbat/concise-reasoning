@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "gsm8k",
+        "question": "The teacher divided the students into four groups. One group had 5 students, another 8 students, and the third 7 students. If there were 24 total students, how many students were in the fourth group?",
+        "solution": "Let's think step by step. \nFirst, we add the number of students in the three groups we know about. \n5 + 8 + 7 = 20 \nThe fourth group has 24 - 20 = 4 students. \nThe answer is 4."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Robin likes to bake cupcakes for friends and to make her puppy North happy. Once Robin ate four cupcakes with chocolate sauce and twice as many cupcakes with buttercream frosting on her own. How many cupcakes did Robin eat?",
+        "solution": "Let's analyze the situation:\n\nRobin ate 4 cupcakes with chocolate sauce.\n\nShe also ate twice as many cupcakes with buttercream frosting, which is 2 x 4 = 8 cupcakes.\n\nSo, in total, Robin ate 4 + 8 = 12 cupcakes.\n\nThe answer is 12."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Cooper makes 7 apple pies a day. He does this for 12 days. Ashley then eats 50 of his pies. How many apple pies remain with Cooper?",
+        "solution": "Let's follow the steps:\n\n1. Cooper makes 7 apple pies a day. So, in 12 days, he makes 7 x 12 = 84 pies.\n\n2. Ashley eats 50 of Cooper's pies, leaving 84 - 50 = 34 pies.\n\nThe answer is 34."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Julie is making caesar salad for a family picnic. At the market, she spends $8 on green lettuce and $6 on red lettuce. If each type of lettuce costs $2 per pound, how many total pounds of lettuce did she buy?",
+        "solution": "Let's follow the steps to solve the problem.\n\n1. Calculate the total cost of the lettuce: $8 (green lettuce) + $6 (red lettuce) = $14\n2. Calculate the total weight of the lettuce: $14 / $2 per pound = 7 pounds\n\nThe answer is 7 pounds."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Morgan goes to the drive-thru and orders his lunch.  He gets a hamburger for $4, onion rings for $2 and a smoothie for $3. If he pays with a $20 bill, how much change does he receive?",
+        "solution": "To find the total amount Morgan paid, add the cost of the hamburger, onion rings, and smoothie: $4 + $2 + $3 = $9. \n\nTo find the change, subtract the total amount paid from the $20 bill: $20 - $9 = $11.\n\nThe answer is $11."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Ryan builds model mustang cars.  A full size mustang is 240 inches long.  The mid-size model that Ryan creates is 1/10th the size, and the smallest model that Ryan creates is half the size of the mid-size model.  How many inches long is the smallest model mustang?",
+        "solution": "To find the length of the smallest model mustang, we need to find the length of the mid-size model and then divide that by 2.\n\nMid-size model: 240 inches / 10 = 24 inches\n\nSmallest model: 24 inches / 2 = 12 inches\n\nThe answer is 12 inches."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "A pie shop charges $5 for a slice of pie. They cut each whole pie into 4 slices. How much money will the pie shop make if they sell 9 pies?",
+        "solution": "Step 1: Determine the number of slices in 9 pies.\n9 pies * 4 slices per pie = 36 slices\n\nStep 2: Determine the price per slice.\n$5 per slice\n\nStep 3: Determine the total amount of money the pie shop will make.\n36 slices * $5 per slice = $180"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Twelve coworkers go out for lunch together and order three pizzas. Each pizza is cut into eight slices. If each person gets the same number of slices, how many slices will each person get?",
+        "solution": "To find out how many slices each person will get, we need to divide the total number of slices (which is 24, since 3 pizzas with 8 slices each) by the number of people (12).\n\n24 slices \u00f7 12 people = 2 slices per person\n\nSo, each person will get 2 slices of pizza."
+    }
+]

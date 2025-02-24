@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "math",
+        "question": "Find one-fourth of 6 times 8.",
+        "solution": "6 * 8 = 48\n48 / 4 = 12\nThe answer is 12"
+    },
+    {
+        "dataset": "math",
+        "question": "Sixteen is 64$\\%$ of what number?",
+        "solution": "64 / 16 = 4\n100 / 4 = 25\nThe answer is 25"
+    },
+    {
+        "dataset": "math",
+        "question": "What is $\\sqrt[4]{16} \\cdot \\sqrt[3]{8} \\cdot \\sqrt{4}$ expressed as a positive integer?",
+        "solution": "sqrt4_of_16 = 2\nsqrt3_of_8 = 2\nsqrt_of_4 = 2\n2 * 2 * 2 = 8\nThe answer is 8"
+    },
+    {
+        "dataset": "math",
+        "question": "If $\\|\\mathbf{v}\\| = 4,$ then find $\\mathbf{v} \\cdot \\mathbf{v}.$",
+        "solution": "The length of v is 4.\nTo find v dot v, calculate 4 squared.\nThe answer is 16."
+    },
+    {
+        "dataset": "math",
+        "question": "The function $f(x)$ takes positive real numbers to real numbers, such that\n\\[xf(y) - yf(x) = f \\left( \\frac{x}{y} \\right)\\]for all positive real numbers $x$ and $y.$  Find all possible values of $f(100).$  Enter all possible values, separated by commas.",
+        "solution": "Set x = y to get f(y) = -f(y) which implies f(y) = 0 for all y.\nSo f(100) = 0"
+    },
+    {
+        "dataset": "math",
+        "question": "One more than $11$ times a certain prime $p$ is another prime $q$. What is the value of $q$?",
+        "solution": "11 * p + 1 = q\nif p = 2 then q = 23\nThe answer is 23"
+    },
+    {
+        "dataset": "math",
+        "question": "A wooden model of a square pyramid has a base edge of 12 cm and an altitude of 8 cm. A cut is made parallel to the base of the pyramid that separates it into two pieces: a smaller pyramid and a frustum. Each base edge of the smaller pyramid is 6 cm and its altitude is 4 cm. How many cubic centimeters are in the volume of the frustum?",
+        "solution": "Volume small pyramid = (1/3)*6^2*4 = 48 cc\nVolume original pyramid = (1/3)*12^2*8 = 384 cc\nFrustum volume = Volume original - Volume small = 336 cc\nThe answer is 336"
+    },
+    {
+        "dataset": "math",
+        "question": "A circular dartboard is divided into regions with various central angles, as shown. The probability of a dart randomly landing in a particular region is $\\frac16$. What is the corresponding measure, in degrees, of the central angle of this section of the dartboard? [asy]\nunitsize(1.5cm);\ndefaultpen(linewidth(.7pt));\n\npair O=(0,0);\ndraw(Circle(O,1));\ndraw(dir(0)--O--dir(90));\ndraw(dir(150)--O--dir(225));\n[/asy]",
+        "solution": "The full circle is 360 degrees.\nThe probability corresponds to 1/6 of the circle.\nSo we calculate 360 / 6 = 60 degrees.\nThe answer is 60"
+    }
+]

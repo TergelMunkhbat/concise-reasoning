@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "gsm8k",
+        "question": "Robin likes to bake cupcakes for friends and to make her puppy North happy. Once Robin ate four cupcakes with chocolate sauce and twice as many cupcakes with buttercream frosting on her own. How many cupcakes did Robin eat?",
+        "solution": "Robin ate 4 + 8 = 12 cupcakes in total.\n\nThe answer is 12."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Toby is in a juggling contest with a friend. The winner is whoever gets the most objects rotated around in 4 minutes. Toby has 5 baseballs and each one makes 80 rotations. His friend has 4 apples and each one makes 101 rotations. How many total rotations of objects are made by the winner?",
+        "solution": "Toby's friend makes 4 x 101 = 404 rotations.\n\nThe answer is 404."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Maynard's dog dug 8 holes in the lawn.  Maynard filled in 75% of the hole with dirt.  How many holes remain unfilled?",
+        "solution": "Maynard filled in 8 x 0.75 = 6 holes.\n\nThe answer is 2."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "My brother and I have thirty minutes to go to school, without being late. It takes us 15 minutes to arrive at the school gate, and another 6 minutes to get to the school building. How much time do we have to get to our room, without being late?",
+        "solution": "My brother and I have 30 - 15 - 6 = 9 minutes to get to our room."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Tim owns rental properties.  He decides to replace all the locks and needs to get 3 keys per lock.  He owns two apartment complexes which each have 12 apartments.  How many keys does he need to make?",
+        "solution": "Tim needs to make 2 * 12 * 3 = 72 keys.\n\nThe answer is 72."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Grant has four times as many vacations as Kelvin has classes. If Kelvin has 90 classes, how many vacations and classes do Grant and Kelvin have altogether?",
+        "solution": "Grant has 4 x 90 = 360 vacations. Kelvin has 90 classes.\n\nThe answer is 450."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "The teacher divided the students into four groups. One group had 5 students, another 8 students, and the third 7 students. If there were 24 total students, how many students were in the fourth group?",
+        "solution": "The fourth group had 24 - 5 - 8 - 7 = 4 students.\n\nThe answer is 4."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Tom and Elizabeth have a competition to climb a hill. Elizabeth takes 30 minutes to climb the hill. Tom takes four times as long as Elizabeth does to climb the hill. How many hours does it take Tom to climb up the hill?",
+        "solution": "Tom takes 4 x 30 minutes = 120 minutes = 2 hours to climb the hill.\n\nThe answer is 2."
+    }
+]

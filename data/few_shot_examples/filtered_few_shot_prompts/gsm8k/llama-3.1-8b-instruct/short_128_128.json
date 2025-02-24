@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "gsm8k",
+        "question": "John buys cans of soup for buy 1 get one free.  He gets 30 cans with a normal price of $0.60.  How much does he pay?",
+        "solution": "John pays for 15 cans. 15 cans * $0.60 = $9."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "There were 40 kids on Lake Pleasant. A fourth of the kids went tubing, but only half of the tubers went rafting. How many of the kids who joined the rafting excursion were also on the tubing excursion?",
+        "solution": "40 kids on Lake Pleasant. A fourth of 40 is 10 kids went tubing. Half of 10 is 5 kids went rafting who went tubing."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Macey saves to buy herself a shirt that costs $3. She was able to save $1.50 already. How many weeks does she need to save for the remaining amount if she saves $0.50 per week?",
+        "solution": "Macey needs $1.50 more to buy the shirt. \n$1.50 / $0.50 = 3 \nThe answer is 3."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Out of the 200 apples in an orchard, 40 percent were rotten. Also, 70 percent of the rotten apples smelled. How many rotten apples in the orchard did not smell?",
+        "solution": "200 apples * 40 percent = 80 rotten apples\n80 rotten apples * 30 percent = 24 rotten apples do not smell\nThe answer is 24."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Jack has a stack of books that is 12 inches thick. He knows from experience that 80 pages is one inch thick. If he has 6 books, how many pages is each one on average?",
+        "solution": "12 inches thick is 12 x 80 = 960 pages\n960 pages divided by 6 books is 160 pages per book\n160 pages per book is the average"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Tom and Elizabeth have a competition to climb a hill. Elizabeth takes 30 minutes to climb the hill. Tom takes four times as long as Elizabeth does to climb the hill. How many hours does it take Tom to climb up the hill?",
+        "solution": "Tom takes 30 * 4 minutes to climb the hill.\n30 * 4 = 120 minutes\n120 minutes = 2 hours\n\nThe answer is 2."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Morgan goes to the drive-thru and orders his lunch.  He gets a hamburger for $4, onion rings for $2 and a smoothie for $3. If he pays with a $20 bill, how much change does he receive?",
+        "solution": "Morgan's cost is $4 + $2 + $3 = $9.\nThe change is $20 - $9 = $11.\nThe answer is $11."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "A fox can run at the maximum speed of 50 kilometers per hour. Considering the fox would run at a constant speed, what distance would he make during 120 minutes?",
+        "solution": "First convert 120 minutes to hours 120 / 60 = 2\nThen multiply speed by time 50 * 2 = 100\nThe answer is 100."
+    }
+]

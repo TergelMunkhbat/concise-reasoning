@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "gsm8k",
+        "question": "Ines had $20 in her purse. She bought 3 pounds of peaches, which are $2 per pound at the local farmers\u2019 market. How much did she have left?",
+        "solution": "Here's how to solve the problem:\n\n1. **Calculate the cost of the peaches:** 3 pounds * $2/pound = $6\n\n2. **Determine the remaining amount:** $20 - $6 = $14\n\n**The answer is $14** \n"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Maynard's dog dug 8 holes in the lawn.  Maynard filled in 75% of the hole with dirt.  How many holes remain unfilled?",
+        "solution": "Here's how to solve the problem:\n\n1. **Calculate the number of holes filled:** 8 holes * 75% = 6 holes\n\n2. **Calculate the number of holes remaining:** 8 holes - 6 holes = 2 holes\n\n**The answer is 2.** \n"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Twelve coworkers go out for lunch together and order three pizzas. Each pizza is cut into eight slices. If each person gets the same number of slices, how many slices will each person get?",
+        "solution": "Here's how to solve this problem:\n\n1. **Total slices:** 3 pizzas * 8 slices/pizza = 24 slices\n2. **Slices per person:** 24 slices / 12 people = 2 slices/person\n\n**The answer is** 2 slices/person. \n"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "The teacher divided the students into four groups. One group had 5 students, another 8 students, and the third 7 students. If there were 24 total students, how many students were in the fourth group?",
+        "solution": "Here's how to solve this problem:\n\n1. **Find the sum of the first three groups:** 5 + 8 + 7 = 20 students\n\n2. **Subtract the sum from the total number of students:** 24 - 20 = 4 students\n\n**The answer is 4.** \n"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Cooper makes 7 apple pies a day. He does this for 12 days. Ashley then eats 50 of his pies. How many apple pies remain with Cooper?",
+        "solution": "Here's the step-by-step reasoning:\n\n1. **Calculate total pies made:** Cooper makes 7 pies/day * 12 days = 84 pies.\n2. **Calculate pies remaining:** Cooper has 84 pies - 50 pies = 34 pies remaining.\n\n**The answer is** 34. \n"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "A pie shop charges $5 for a slice of pie. They cut each whole pie into 4 slices. How much money will the pie shop make if they sell 9 pies?",
+        "solution": "Here's how to solve the problem step-by-step:\n\n1. **Calculate the earnings per pie:** \n   - Each pie makes 4 slices * $5/slice = $20\n   - They can make $20/pie * 9 pies = $180 \n\n**The answer is $180** \n"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Julie is making caesar salad for a family picnic. At the market, she spends $8 on green lettuce and $6 on red lettuce. If each type of lettuce costs $2 per pound, how many total pounds of lettuce did she buy?",
+        "solution": "Here's how to solve the problem:\n\n1. **Find the total cost of the lettuce:** Julie spent $8 + $6 = $14 on lettuce.\n\n2. **Divide the total cost by the price per pound:** $14 / $2 per pound = 7 pounds.\n\n**Answer is:** Julie bought 7 pounds of lettuce. \n"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "My brother and I have thirty minutes to go to school, without being late. It takes us 15 minutes to arrive at the school gate, and another 6 minutes to get to the school building. How much time do we have to get to our room, without being late?",
+        "solution": "Here's the breakdown:\n\n1. **Calculate the total travel time:** 15 minutes (gate) + 6 minutes (building) = 21 minutes\n2. **Subtract the travel time from the total time:** 30 minutes (total) - 21 minutes (travel) = 9 minutes\n\n**The answer is** 9 minutes. \n"
+    }
+]

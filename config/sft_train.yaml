@@ -1,0 +1,6 @@
+defaults:
+  - _self_
+  - trainer: sft
+
+env:
+  TOKENIZERS_PARALLELISM: false

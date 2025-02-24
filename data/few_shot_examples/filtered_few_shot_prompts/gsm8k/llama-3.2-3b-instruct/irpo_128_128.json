@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "gsm8k",
+        "question": "Ines had $20 in her purse. She bought 3 pounds of peaches, which are $2 per pound at the local farmers\u2019 market. How much did she have left?",
+        "solution": "To find out how much Ines had left, I'll follow these steps:\n\n1. Calculate the total cost of the peaches: 3 pounds x $2 per pound = $6\n2. Subtract the cost of the peaches from the initial amount of money Ines had: $20 - $6 = $14\n\nThe answer is $14."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Tim owns rental properties.  He decides to replace all the locks and needs to get 3 keys per lock.  He owns two apartment complexes which each have 12 apartments.  How many keys does he need to make?",
+        "solution": "Here's the step-by-step reasoning:\n\n1. Tim has 2 apartment complexes, each with 12 apartments. So, the total number of apartments is 2 x 12 = 24.\n2. Each apartment needs 3 keys, so the total number of keys needed is 24 x 3 = 72.\n\nTherefore, Tim needs to make 72 keys."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Twelve coworkers go out for lunch together and order three pizzas. Each pizza is cut into eight slices. If each person gets the same number of slices, how many slices will each person get?",
+        "solution": "To find out how many slices each person will get, I will follow these steps:\n\n1. Calculate the total number of slices: 3 pizzas x 8 slices per pizza = 24 slices\n2. Divide the total number of slices by the number of people: 24 slices \u00f7 12 people = 2 slices per person\n\nTherefore, I will get:\n\nThe answer is 2"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Morgan goes to the drive-thru and orders his lunch.  He gets a hamburger for $4, onion rings for $2 and a smoothie for $3. If he pays with a $20 bill, how much change does he receive?",
+        "solution": "Here's the step-by-step reasoning:\n\n1. Calculate the total cost of the lunch: $4 (hamburger) + $2 (onion rings) + $3 (smoothie) = $9\n2. Calculate the change: Subtract the total cost from the $20 bill: $20 - $9 = $11\n\nTherefore, the amount of change Morgan receives is $11."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Mrs. Petersons bought 10 tumblers for $45 each. She paid with five $100 bills. How much change will Mrs. Petersons receive?",
+        "solution": "Here's the step-by-step reasoning:\n\n1. Calculate the total cost of the 10 tumblers:\n10 tumblers x $45 each = $450\n2. Calculate the total amount paid by Mrs. Petersons:\n5 x $100 = $500\n3. Calculate the change:\n$500 (amount paid) - $450 (total cost) = $50\n\nThe answer is $50."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Maynard's dog dug 8 holes in the lawn.  Maynard filled in 75% of the hole with dirt.  How many holes remain unfilled?",
+        "solution": "To solve this problem, I'll follow the steps:\n\n1. Calculate the number of holes that Maynard filled in: 75% of 8 holes = 0.75 x 8 = 6 holes.\n2. Calculate the number of holes that remain unfilled: Total number of holes - Number of holes filled = 8 - 6 = 2 holes.\n\nThe answer is 2."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "A pie shop charges $5 for a slice of pie. They cut each whole pie into 4 slices. How much money will the pie shop make if they sell 9 pies?",
+        "solution": "Here's the step-by-step reasoning:\n\n1. The pie shop cuts each whole pie into 4 slices, so they can sell 4 slices per pie.\n2. They sell 9 pies, so they can sell a total of 9 x 4 = 36 slices.\n3. Each slice costs $5, so they will make 36 x $5 = $180.\n\nThe answer is $180."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "The teacher divided the students into four groups. One group had 5 students, another 8 students, and the third 7 students. If there were 24 total students, how many students were in the fourth group?",
+        "solution": "To find out how many students were in the fourth group, I will follow these steps:\n\n1. Add up the number of students in the first three groups: 5 + 8 + 7 = 20\n2. Since there are 24 total students, I will subtract the number of students in the first three groups from the total: 24 - 20 = 4\n\nThe answer is 4."
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "gsm8k",
+        "question": "Mehki is 10 years older than Jordyn. Jordyn's age is double Zrinka's age. If Zrinka is 6 years old, how many years old is Mehki?",
+        "solution": "To determine Mehki's age, we need to follow the information given step by step.\n\n1. We know that Zrinka is 6 years old.\n2. Jordyn's age is double Zrinka's age. Therefore, Jordyn's age is \\(2 \\times 6 = 12\\) years old.\n3. Mehki is 10 years older than Jordyn. Therefore, Mehki's age is \\(12 + 10 = 22\\) years old.\n\nSo, the answer is \\(\\boxed{22}\\)."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Maynard's dog dug 8 holes in the lawn.  Maynard filled in 75% of the hole with dirt.  How many holes remain unfilled?",
+        "solution": "To determine how many holes remain unfilled, we start by calculating how many holes Maynard filled in. Maynard filled in 75% of the 8 holes. We can find 75% of 8 by performing the following calculation:\n\n\\[ 0.75 \\times 8 = 6 \\]\n\nThis means Maynard filled in 6 holes. To find out how many holes remain unfilled, we subtract the number of holes filled from the total number of holes:\n\n\\[ 8 - 6 = 2 \\]\n\nTherefore, the number of holes that remain unfilled is \\(\\boxed{2}\\)."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Morgan goes to the drive-thru and orders his lunch.  He gets a hamburger for $4, onion rings for $2 and a smoothie for $3. If he pays with a $20 bill, how much change does he receive?",
+        "solution": "To determine how much change Morgan will receive, we need to follow these steps:\n\n1. **Calculate the total cost of the items ordered:**\n   - Hamburger: $4\n   - Onion rings: $2\n   - Smoothie: $3\n\n   Total cost = $4 + $2 + $3 = $9\n\n2. **Subtract the total cost from the amount paid:**\n   - Amount paid: $20\n   - Total cost: $9\n\n   Change = $20 - $9 = $11\n\nTherefore, Morgan will receive \\boxed{11} dollars in change."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "By the time Anne is two times as old as Emile, Emile will be six times as old as Maude. If Maude will be 8 years old, how old will Anne be?",
+        "solution": "To determine Anne's age when the conditions of the problem are met, let's break down the information step by step.\n\n1. Identify the ages at the future time when the conditions are met:\n   - Maude will be 8 years old.\n   - Emile will be six times as old as Maude, so Emile will be \\(6 \\times 8 = 48\\) years old.\n   - Anne will be two times as old as Emile, so Anne will be \\(2 \\times 48 = 96\\) years old.\n\nSo, the age of Anne will be \\(\\boxed{96}\\)."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Nathaniel has 11 tickets to a basketball game. He gives away 2 tickets each to his best friends, until he only has 3 tickets left. How many best friends does Nathaniel have?",
+        "solution": "To determine how many best friends Nathaniel has, we can follow these steps:\n\n1. Start with the total number of tickets Nathaniel initially has, which is 11.\n2. Nathaniel gives away 2 tickets to each best friend until he only has 3 tickets left. This means the number of tickets he gives away is \\(11 - 3 = 8\\).\n3. Since he gives away 2 tickets to each best friend, the number of best friends is the total tickets given away divided by 2. So, \\(8 \\div 2 = 4\\).\n\nTherefore, Nathaniel has \\(\\boxed{4}\\) best friends."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Tim owns rental properties.  He decides to replace all the locks and needs to get 3 keys per lock.  He owns two apartment complexes which each have 12 apartments.  How many keys does he need to make?",
+        "solution": "To determine the total number of keys Tim needs to make, we can follow these steps:\n\n1. Calculate the total number of apartments Tim owns.\n   - Tim owns two apartment complexes.\n   - Each complex has 12 apartments.\n   - Therefore, the total number of apartments is \\(2 \\times 12 = 24\\).\n\n2. Determine the total number of keys needed.\n   - Tim needs 3 keys per lock.\n   - Since there is one lock per apartment, the total number of keys needed is \\(24 \\times 3 = 72\\).\n\nSo, the total number of keys Tim needs to make is \\(\\boxed{72}\\)."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Lillian went out to forage for mushrooms with her handy guidebook. She found 32 mushrooms and used her guidebook to identify which ones were poisonous and which were safe to eat. In the end, she had 9 mushrooms she could safely eat for dinner. Of the rest, she identified twice the amount she ate as poisonous, and a remaining bunch she was uncertain about. How many mushrooms was she uncertain were safe or poisonous?",
+        "solution": "Let's break down the problem step by step.\n\n1. Lillian found a total of 32 mushrooms.\n2. She identified 9 mushrooms as safe to eat.\n3. The number of mushrooms she identified as poisonous is twice the number she ate, which is \\(2 \\times 9 = 18\\).\n4. The rest of the mushrooms are the ones she is uncertain about.\n\nTo find the number of mushrooms she is uncertain about, we subtract the number of safe and poisonous mushrooms from the total number of mushrooms:\n\\[ 32 - 9 - 18 = 5 \\]\n\nSo, the number of mushrooms she is uncertain about is \\(\\boxed{5}\\)."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Patricia is growing her long very long to donate it to a charity that makes wigs for cancer survivors. Her hair is 14 inches long. She needs to donate 23 inches to make a wig. She wants her hair to be 12 inches long after the donation. How much longer does she have to grow her hair?",
+        "solution": "To determine how much longer Patricia needs to grow her hair, we can break down the problem step by step.\n\n1. Identify the current length of Patricia's hair: 14 inches.\n2. Identify the length of hair she needs to have before the donation: 23 inches (for the donation) + 12 inches (to keep her hair 12 inches long after the donation) = 35 inches.\n3. Calculate the difference between the required length before the donation and her current length: 35 inches - 14 inches = 21 inches.\n\nTherefore, Patricia needs to grow her hair 21 more inches. The answer is:\n\n\\boxed{21}"
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "math",
+        "question": "Find one-fourth of 6 times 8.",
+        "solution": "Here's how to solve this problem step-by-step:\n\n**1. Multiply 6 by 8:**\n\n   6 * 8 = 48\n\n**2. Divide the product by 4:**\n\n   48 / 4 = 12\n\n**Answer is:** 12 \n"
+    },
+    {
+        "dataset": "math",
+        "question": "What is $\\frac{1}{4}\\%$ of 120? Express your answer as a decimal.",
+        "solution": "Here's how to solve this problem:\n\n**1. Convert the percentage to a decimal:**\n\n*  1% = 0.01\n*  Therefore, (1/4)% = 0.01/4 = 0.0025\n\n**2. Multiply the decimal by the number:**\n\n*  0.0025 * 120 = 0.3 \n\n**Answer is:** 0.3 \n"
+    },
+    {
+        "dataset": "math",
+        "question": "What is $\\sqrt[4]{16} \\cdot \\sqrt[3]{8} \\cdot \\sqrt{4}$ expressed as a positive integer?",
+        "solution": "Here's how to solve the problem step-by-step:\n\n**1. Simplify the radicals:**\n\n*  $\\sqrt[4]{16} = \\sqrt[4]{2^4} = 2$ \n*  $\\sqrt[3]{8} = \\sqrt[3]{2^3} = 2$\n*  $\\sqrt{4} = 2$\n\n**2. Substitute the simplified radicals into the expression:**\n\n  $2 \\cdot 2 \\cdot 2 = 8$\n\n**Answer is:** 8 \n"
+    },
+    {
+        "dataset": "math",
+        "question": "If $\\|\\mathbf{v}\\| = 4,$ then find $\\mathbf{v} \\cdot \\mathbf{v}.$",
+        "solution": "Here's how to solve the problem:\n\n**1. Recall the Definition of the Dot Product**\n\nThe dot product of two vectors is related to the magnitudes of the vectors and the angle between them:\n\n  **v** \u22c5 **v** = ||**v**||\u00b2\n\n**2. Apply the Given Information**\n\nWe are given that ||**v**|| = 4.  This means the magnitude of vector **v** is 4.\n\n**3. Calculate v \u2022 v**\n\nSubstitute the given information into the dot product formula:\n\n**v** \u22c5 **v** = ||**v**||\u00b2 = 4\u00b2 = 16 \n\n**Answer is** 16. \n"
+    },
+    {
+        "dataset": "math",
+        "question": "A circular dartboard is divided into regions with various central angles, as shown. The probability of a dart randomly landing in a particular region is $\\frac16$. What is the corresponding measure, in degrees, of the central angle of this section of the dartboard? [asy]\nunitsize(1.5cm);\ndefaultpen(linewidth(.7pt));\n\npair O=(0,0);\ndraw(Circle(O,1));\ndraw(dir(0)--O--dir(90));\ndraw(dir(150)--O--dir(225));\n[/asy]",
+        "solution": "Here's how to solve the problem:\n\n**1.  Understand the Relationship:**\n\n*   The dartboard is divided into regions with equal probabilities.\n*   The central angle of a region represents the angle it subtends at the center of the circle.\n\n**2.  Calculate the Central Angle:**\n\n*   The probability of a dart landing in any region is 1/6.\n*   A complete circle has 360 degrees. \n*   Therefore, each region represents 360 degrees / 6 = 60 degrees.\n\n**3.  Answer:**\n\nThe corresponding measure, in degrees, of the central angle of this section of the dartboard is **60 degrees**. \n"
+    },
+    {
+        "dataset": "math",
+        "question": "When a polynomial is divided by $2x^2 - 7x + 18,$ what are the possible degrees of the remainder?  Enter all the possible values, separated by commas.",
+        "solution": "Here's the reasoning:\n\n* **Understanding Polynomial Division:** When a polynomial is divided by another polynomial, the remainder will always have a lower degree than the divisor.  \n* **Degree and Remainders:** The degree of a remainder is determined by the highest power of the variable in the remainder. \n* **The Divisor's Degree:**  The divisor, $2x^2 - 7x + 18$, has a degree of 2.\n* **Finding Possible Remainders:** The possible degrees of the remainder are determined by the possible degrees of the terms that could be left over after dividing.  These terms would have to be a constant or a linear term.\n\n\n**Answer:** The possible degrees of the remainder are $\\boxed{0, 1}$. \n"
+    },
+    {
+        "dataset": "math",
+        "question": "The number $n$ is a prime number between 20 and 30. If you divide $n$ by 8, the remainder is 5. What is the value of $n$?",
+        "solution": "Here's how to solve the problem:\n\n* **Understanding the problem:** We are given that *n* is a prime number between 20 and 30. We know it leaves a remainder of 5 when divided by 8. \n\n* **Prime Numbers:** A prime number is a whole number greater than 1 that has only two divisors: 1 and itself.\n\n* **Working with the information:**  Since *n* is a prime number between 20 and 30, the possible prime numbers are: 23, 29. \n\n* **Checking the remainders:**\n    * 23 divided by 8 has a remainder of 3. \n    * 29 divided by 8 has a remainder of 5.\n\n* **The Answer:** Since 29 satisfies all the conditions, the value of *n* is **29**. \n \nThe answer is 29. \n"
+    },
+    {
+        "dataset": "math",
+        "question": "A solid box is 15 cm by 10 cm by 8 cm. A new solid is formed by removing a cube 3 cm on a side from each corner of this box. What percent of the original volume is removed?",
+        "solution": "Here's how to solve the problem:\n\n**1. Find the original volume:**\n\n* The original box has volume: 15 cm * 10 cm * 8 cm = 1200 cm\u00b3\n\n**2. Calculate the volume of one removed cube:**\n\n* Each corner cube has volume: 3 cm * 3 cm * 3 cm = 27 cm\u00b3\n\n**3. Find the total volume of cubes removed:**\n\n* Since there are 8 corners, the total volume of removed cubes is: 27 cm\u00b3 * 8 = 216 cm\u00b3\n\n**4. Calculate the volume remaining:**\n\n* The volume remaining is: 1200 cm\u00b3 - 216 cm\u00b3 = 984 cm\u00b3\n\n**5. Calculate the percentage of volume removed:**\n\n* The percentage of volume removed is: (216 cm\u00b3 / 1200 cm\u00b3) * 100% = 18%\n\n\n**Answer:** The answer is 18%. \n"
+    }
+]

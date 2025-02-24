@@ -1,0 +1,12 @@
+torch
+datasets
+transformers
+accelerate
+jupyter
+matplotlib
+hydra-core
+torch-geometric
+scikit-learn
+tensorboardX
+hydra-core
+vllm

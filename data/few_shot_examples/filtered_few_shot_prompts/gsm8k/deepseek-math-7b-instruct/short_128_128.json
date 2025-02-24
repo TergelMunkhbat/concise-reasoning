@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "gsm8k",
+        "question": "The teacher divided the students into four groups. One group had 5 students, another 8 students, and the third 7 students. If there were 24 total students, how many students were in the fourth group?",
+        "solution": " If there were 24 total students and three groups of students, then the fourth group would have 24 - 5 - 8 - 7 = 4 students."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Ines had $20 in her purse. She bought 3 pounds of peaches, which are $2 per pound at the local farmers\u2019 market. How much did she have left?",
+        "solution": " Ines spent 3 * $2 = $6 on peaches.\n\nTherefore, she has $20 - $6 = $14 left.\n\nSo the answer is $\\boxed{14}$."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Morgan goes to the drive-thru and orders his lunch.  He gets a hamburger for $4, onion rings for $2 and a smoothie for $3. If he pays with a $20 bill, how much change does he receive?",
+        "solution": " Morgan's lunch costs $4 + $2 + $3 = $9.\n\nHe pays with a $20 bill, so he should receive $20 - $9 = $11 in change."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Davante has twice as many friends as there are days in the week. 3 of his friends are girls. How many friends does he have that are boys?",
+        "solution": " The number of friends Davante has is 2 * 7 = 14\nDavante has 14 - 3 = 11 friends who are boys.\nSo the answer is $\\boxed{11}$."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Purple Valley has one-quarter as many skirts as Seafoam Valley, and Seafoam Valley has two-thirds as many skirts as Azure Valley. If Azure Valley has 60 skirts, how many skirts does Purple Valley have?",
+        "solution": " Seafoam Valley has 2/3 * 60 = 40 skirts.\nPurple Valley has 1/4 * 40 = 10 skirts.\nSo the answer is $\\boxed{10}$."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Carl has been selling watermelons on the side of the road for $3 each. This evening he went home with $105 in profit and 18 watermelons. How many watermelons did he start out with this morning?",
+        "solution": " Carl sold 105 / 3 = 35 watermelons.\n\nHe started with 35 + 18 = 53 watermelons.\n\nSo the answer is $\\boxed{53}$."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Annie has $120. The restaurant next door sells hamburgers for $4 each. The restaurant across the street sells milkshakes for $3 each. Annie buys 8 hamburgers and 6 milkshakes. How much money, in dollars, does she have left?",
+        "solution": " Annie has 120 - (8 * 4) - (6 * 3) = 120 - 32 - 18 = 70 dollars left.\nThe answer is $\\boxed{70}$."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Cristine bought a dozen lemons and gave 1/4 of them to her neighbor. How many lemons does Cristine have left?",
+        "solution": " Cristine bought 12 lemons.\nShe gave away 1/4 * 12 = 3 lemons.\nSo, Cristine has 12 - 3 = 9 lemons left.\nThe answer is $\\boxed{9}$."
+    }
+]

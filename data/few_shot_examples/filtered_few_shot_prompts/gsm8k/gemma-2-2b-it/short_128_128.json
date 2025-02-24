@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "gsm8k",
+        "question": "Ines had $20 in her purse. She bought 3 pounds of peaches, which are $2 per pound at the local farmers\u2019 market. How much did she have left?",
+        "solution": "Ines spent 3 * 2 = $6 on peaches. \nShe had $20 - $6 = $14 left.\nThe answer is $14. \n"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "The teacher divided the students into four groups. One group had 5 students, another 8 students, and the third 7 students. If there were 24 total students, how many students were in the fourth group?",
+        "solution": "Total students = 5 + 8 + 7 = 20\nStudents in the fourth group = 24 - 20 = 4\n\nThe answer is 4. \n"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Morgan goes to the drive-thru and orders his lunch.  He gets a hamburger for $4, onion rings for $2 and a smoothie for $3. If he pays with a $20 bill, how much change does he receive?",
+        "solution": "Morgan spends: $4 + $2 + $3 = $9.\nThe change is: $20 - $9 = $11.\nThe answer is $11. \n"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Maynard's dog dug 8 holes in the lawn.  Maynard filled in 75% of the hole with dirt.  How many holes remain unfilled?",
+        "solution": "Maynard's dog dug 8 holes.  He filled 75% of the holes.  This means 25% of the holes remain unfilled.\n\nThe answer is 2. \n"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Cristine bought a dozen lemons and gave 1/4 of them to her neighbor. How many lemons does Cristine have left?",
+        "solution": "Cristine bought 12 lemons. She gave away 12 / 4 = 3 lemons.  She has 12 - 3 = 9 lemons left.\n\nThe answer is 9. \n"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "A pie shop charges $5 for a slice of pie. They cut each whole pie into 4 slices. How much money will the pie shop make if they sell 9 pies?",
+        "solution": "The shop sells each pie for $5. Each pie has 4 slices.  The shop will make 9 * 4 * 5 = $180.\n\nThe answer is $180. \n"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "There are six chairs in each row in a church. If there are 20 rows of chairs in the church, and each chair holds five people, calculate the number of people who have to sit in the chairs for the church to be full.",
+        "solution": "Number of chairs: 6 * 20 = 120\nPeople per chair: 5\nTotal people: 120 * 5 = 600\n\nThe answer is 600 \n"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Trace has five shopping bags that weigh the same amount as Gordon\u2019s two shopping bags. One of Gordon\u2019s shopping bags weighs three pounds and the other weighs seven. Trace\u2019s shopping bags all weigh the same amount. How many pounds does one of Trace\u2019s bags weigh?",
+        "solution": "Gordon's bags weigh 3 + 7 = 10 pounds. \nTrace's bags weigh 10 pounds / 5 bags = 2 pounds per bag. \nThe answer is 2. \n"
+    }
+]

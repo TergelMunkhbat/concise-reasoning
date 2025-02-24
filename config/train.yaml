@@ -1,0 +1,7 @@
+defaults:
+  - _self_
+  - trainer: mr
+
+env:
+  TOKENIZERS_PARALLELISM: false
+  CUDA_VISIBLE_DEVICES: "0,1,2,3"

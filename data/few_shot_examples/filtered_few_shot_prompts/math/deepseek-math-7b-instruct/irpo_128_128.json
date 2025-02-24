@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "math",
+        "question": "Find one-fourth of 6 times 8.",
+        "solution": " One-fourth of 6 times 8 is (1/4) * 6 * 8 = 12"
+    },
+    {
+        "dataset": "math",
+        "question": "Below is the graph of $y = a \\sin (bx + c) + d$ for some positive constants $a,$ $b,$ $c,$ and $d.$  Find $b.$\n\n[asy]import TrigMacros;\n\nsize(400);\n\nreal f(real x)\n{\n\treturn 2*sin(3*x + pi) + 1;\n}\n\ndraw(graph(f,-3*pi,3*pi,n=700,join=operator ..),red);\ntrig_axes(-3*pi,3*pi,-4,4,pi/2,1);\nlayer();\nrm_trig_labels(-5,5, 2);\n\nlabel(\"$1$\", (0,1), E);\nlabel(\"$2$\", (0,2), E);\nlabel(\"$3$\", (0,3), E);\nlabel(\"$-1$\", (0,-1), E);\nlabel(\"$-2$\", (0,-2), E);\nlabel(\"$-3$\", (0,-3), E);\n[/asy]",
+        "solution": " The graph has a period of $2\\pi/3$, so $b = \\boxed{3}$."
+    },
+    {
+        "dataset": "math",
+        "question": "When a polynomial is divided by $2x^2 - 7x + 18,$ what are the possible degrees of the remainder?  Enter all the possible values, separated by commas.",
+        "solution": " When a polynomial is divided by a quadratic, the remainder can be any polynomial of degree less than 2. Therefore, the possible degrees of the remainder are $\\boxed{0, 1}$."
+    },
+    {
+        "dataset": "math",
+        "question": "Sixteen is 64$\\%$ of what number?",
+        "solution": " To find the number, we set up the equation $\\frac{16}{x}=\\frac{64}{100}$. Solving for $x$, we find $x=25$.\nThe answer is $\\boxed{25}$."
+    },
+    {
+        "dataset": "math",
+        "question": "If $|x-2|=p$, where $x<2$, then what is $x-p$ in terms of $p$?",
+        "solution": " If $|x-2|=p$, then $x-2=-p$ because $x<2$.\nSo, $x=2-p$.\nTherefore, $x-p=2-p-p=2-2p$.\nThe answer is $\\boxed{2-2p}$."
+    },
+    {
+        "dataset": "math",
+        "question": "Find $\\tan Y$ in the right triangle shown below.\n\n[asy]\npair X,Y,Z;\nX = (0,0);\nY = (24,0);\nZ = (0,7);\ndraw(X--Y--Z--X);\ndraw(rightanglemark(Y,X,Z,23));\nlabel(\"$X$\",X,SW);\nlabel(\"$Y$\",Y,SE);\nlabel(\"$Z$\",Z,N);\nlabel(\"$25$\",(Y+Z)/2,NE);\nlabel(\"$24$\",Y/2,S);\n[/asy]",
+        "solution": " Since $XZ=7$ and $XY=24$, we have $\\tan Y = \\frac{XZ}{XY} = \\frac{7}{24}$. Therefore, the answer is $\\boxed{\\frac{7}{24}}$."
+    },
+    {
+        "dataset": "math",
+        "question": "A circular dartboard is divided into regions with various central angles, as shown. The probability of a dart randomly landing in a particular region is $\\frac16$. What is the corresponding measure, in degrees, of the central angle of this section of the dartboard? [asy]\nunitsize(1.5cm);\ndefaultpen(linewidth(.7pt));\n\npair O=(0,0);\ndraw(Circle(O,1));\ndraw(dir(0)--O--dir(90));\ndraw(dir(150)--O--dir(225));\n[/asy]",
+        "solution": " Since the probability of landing in this region is $\\frac16$, and there are 6 regions in total, the central angle of this region is $\\frac{360^\\circ}{6} = 60^\\circ$.\nThe answer is $\\boxed{60}$."
+    },
+    {
+        "dataset": "math",
+        "question": "What is the greatest prime factor of $12! + 14!$?  (Reminder: If $n$ is a positive integer, then $n!$ stands for the product $1\\cdot 2\\cdot 3\\cdot \\cdots \\cdot (n-1)\\cdot n$.)",
+        "solution": " We can factor out $12!$ from both terms, so we have $12!(1 + 13 \\cdot 14)$.\nSimplifying, we get $12! \\cdot 183$.\nThe prime factorization of 183 is $3 \\cdot 61$.\nThe greatest prime factor is $\\boxed{61}$.\nThe answer is $\\boxed{61}$."
+    }
+]

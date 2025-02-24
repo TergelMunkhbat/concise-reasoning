@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "gsm8k",
+        "question": "For every 12 cans you recycle, you receive $0.50, and for every 5 kilograms of newspapers, you receive $1.50. If your family collected 144 cans and 20 kilograms of newspapers, how much money would you receive?",
+        "solution": "First, rearrange the equation \\(x^2 - 3x + 9 = x + 41\\) to standard quadratic form. Subtract \\(x\\) and 41 from both sides to get:\n\n\\[x^2 - 3x + 9 - x - 41 = 0\\]\n\nSimplify the equation:\n\n\\[x^2 - 4x - 32 = 0\\]\n\nThis is a quadratic equation in the form \\(ax^2 + bx + c = 0\\) where \\(a = 1\\), \\(b = -4\\), and \\(c = -32\\).\n\nUse the quadratic formula \\(x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\\) to find the solutions. First, calculate the discriminant:\n\n\\[b^2 - 4ac = (-4)^2 - 4 \\cdot 1 \\cdot (-32)\\]\n\n\\[= 16 + 128\\]\n\n\\[= 144\\]\n\nThe square root of 144 is 12. Substitute into the quadratic formula:\n\n\\[x = \\frac{-(-4) \\pm 12}{2 \\cdot 1}\\]\n\n\\[x = \\frac{4 \\pm 12}{2}\\]\n\nCalculate the two solutions:\n\nFirst solution: \\(x = \\frac{4 + 12}{2} = \\frac{16}{2} = 8\\)\n\nSecond solution: \\(x = \\frac{4 - 12}{2} = \\frac{-8}{2} = -4\\)\n\nThe positive difference between the solutions is:\n\n\\[8 - (-4) = 8 + 4 = 12\\]\n\nThe answer is 12."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Betty picked 16 strawberries. Matthew picked 20 more strawberries than Betty and twice as many as Natalie. They used their strawberries to make jam. One jar of jam used 7 strawberries and they sold each jar at $4. How much money were they able to make from the strawberries they picked?",
+        "solution": "First, find how many strawberries Matthew picked. He picked 20 more than Betty. Betty picked 16 strawberries, so Matthew picked 16 + 20 = 36 strawberries.\n\nNext, find how many strawberries Natalie picked. Matthew picked twice as many as Natalie. So, Natalie picked 36 / 2 = 18 strawberries.\n\nNow, find the total number of strawberries picked by all three. Betty picked 16, Matthew picked 36, and Natalie picked 18. So, the total is 16 + 36 + 18 = 70 strawberries.\n\nDetermine how many jars of jam they can make. Each jar uses 7 strawberries. So, 70 strawberries make 70 / 7 = 10 jars.\n\nFinally, calculate the money made from selling the jars. Each jar sells for $4. So, 10 jars make 10 * 4 = $40.\n\nThe answer is $40."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Jack has a stack of books that is 12 inches thick. He knows from experience that 80 pages is one inch thick. If he has 6 books, how many pages is each one on average?",
+        "solution": "First, find the total number of pages in the stack. Since 80 pages make up 1 inch, multiply 80 by the total thickness of the stack, which is 12 inches. This gives 80 * 12 = 960 pages in total.\n\nNext, find the average number of pages per book. Divide the total number of pages, 960, by the number of books, which is 6. This gives 960 / 6 = 160 pages per book on average.\n\nThe answer is 160 pages."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "James dumps his whole collection of 500 Legos on the floor and starts building a castle out of them.  He uses half the pieces before finishing and is told to put the rest away.  He puts all of the leftover pieces back in the box they came from, except for 5 missing pieces that he can't find.  How many Legos are in the box at the end?",
+        "solution": "James starts with 500 Legos. He uses half of them, which is 500 divided by 2, resulting in 250 Legos used. This leaves him with 250 Legos remaining. He puts all the leftover pieces back in the box except for 5 missing pieces. So, he puts 250 minus 5, which is 245 Legos, back in the box. The answer is 245."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Ines had $20 in her purse. She bought 3 pounds of peaches, which are $2 per pound at the local farmers\u2019 market. How much did she have left?",
+        "solution": "Ines started with $20. She bought 3 pounds of peaches. Each pound costs $2. Multiply 3 pounds by $2 per pound to find the total cost: 3 * 2 = $6. Subtract the cost of the peaches from the initial amount: $20 - $6 = $14. The answer is $14."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Aaron pays his actuary membership fees each year. The membership fee increases yearly by $10. If he pays $80 in the first year, how much does his membership cost, in dollars, in the sixth year?",
+        "solution": "1. Start with the first year fee: $80.\n2. The fee increases by $10 each year.\n3. Calculate the fee for the second year: $80 + $10 = $90.\n4. Calculate the fee for the third year: $90 + $10 = $100.\n5. Calculate the fee for the fourth year: $100 + $10 = $110.\n6. Calculate the fee for the fifth year: $110 + $10 = $120.\n7. Calculate the fee for the sixth year: $120 + $10 = $130.\n\nThe answer is $130."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "The price of buying a wooden toy at the new Craftee And Best store is $20, and the cost of buying a hat is $10. If Kendra went to the shop with a $100 bill and bought two wooden toys and three hats, calculate the change she received.",
+        "solution": "1. Calculate the total cost of the wooden toys: 2 toys x $20 each = $40.\n2. Calculate the total cost of the hats: 3 hats x $10 each = $30.\n3. Add the total costs: $40 (toys) + $30 (hats) = $70.\n4. Subtract the total cost from the amount Kendra had: $100 - $70 = $30.\n\nThe answer is $30."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "James is trying to create a new breed of kittens with extra-long tails. Each generation of kittens he breeds has a tail 25% longer than the last generation. If the first generation has tails 16 cm long, how long are the third generation's tails?",
+        "solution": "First, find the length of the second generation's tails. The first generation's tails are 16 cm long. Increase this by 25%: 16 cm * 0.25 = 4 cm. Add this to the original length: 16 cm + 4 cm = 20 cm. \n\nNext, find the length of the third generation's tails. The second generation's tails are 20 cm long. Increase this by 25%: 20 cm * 0.25 = 5 cm. Add this to the second generation's length: 20 cm + 5 cm = 25 cm. \n\nThe answer is 25 cm."
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "gsm8k",
+        "question": "A store owner buys clothes wholesale and adds 80% to the wholesale price to set the retail price. The retail price of a pair of pants is $36. What is the wholesale price?",
+        "solution": "retail = 36\nwholesale = retail / 1.8\nthe answer is 20"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Robin likes to bake cupcakes for friends and to make her puppy North happy. Once Robin ate four cupcakes with chocolate sauce and twice as many cupcakes with buttercream frosting on her own. How many cupcakes did Robin eat?",
+        "solution": "4 * 2 = 8\n4 + 8 = 12\nThe answer is 12"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "John buys cans of soup for buy 1 get one free.  He gets 30 cans with a normal price of $0.60.  How much does he pay?",
+        "solution": "john pays for 15 cans\n15 * 0.6 = 9\nThe answer is 9"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "There are six chairs in each row in a church. If there are 20 rows of chairs in the church, and each chair holds five people, calculate the number of people who have to sit in the chairs for the church to be full.",
+        "solution": "total chairs = 6 * 20\ntotal people = total chairs * 5\nThe answer is 600"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "A pie shop charges $5 for a slice of pie. They cut each whole pie into 4 slices. How much money will the pie shop make if they sell 9 pies?",
+        "solution": "total_slices = 9 * 4\nmoney_made = total_slices * 5\nThe answer is 180"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Morgan goes to the drive-thru and orders his lunch.  He gets a hamburger for $4, onion rings for $2 and a smoothie for $3. If he pays with a $20 bill, how much change does he receive?",
+        "solution": "total_cost = 4 + 2 + 3\nchange = 20 - total_cost\nThe answer is 11"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "James dumps his whole collection of 500 Legos on the floor and starts building a castle out of them.  He uses half the pieces before finishing and is told to put the rest away.  He puts all of the leftover pieces back in the box they came from, except for 5 missing pieces that he can't find.  How many Legos are in the box at the end?",
+        "solution": "He used half so left 250\n250 - 5 = 245\nThe answer is 245"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "There were 40 kids on Lake Pleasant. A fourth of the kids went tubing, but only half of the tubers went rafting. How many of the kids who joined the rafting excursion were also on the tubing excursion?",
+        "solution": "40 / 4 = 10 went tubing\n10 / 2 = 5 went rafting\nThe answer is 5"
+    }
+]

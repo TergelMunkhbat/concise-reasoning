@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "gsm8k",
+        "question": "Every hour past noon shadows from a building stretch an extra 5 feet, starting at zero at noon.  How long are the shadows from the building 6 hours past noon in inches?",
+        "solution": "6 * 5 = 30\n30 * 12 = 360\n\nThe answer is 360"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "There were 40 kids on Lake Pleasant. A fourth of the kids went tubing, but only half of the tubers went rafting. How many of the kids who joined the rafting excursion were also on the tubing excursion?",
+        "solution": "40 / 4 = 10\n10 / 2 = 5\n\nThe answer is 5"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Ines had $20 in her purse. She bought 3 pounds of peaches, which are $2 per pound at the local farmers\u2019 market. How much did she have left?",
+        "solution": "Ines had $20. She spent $6 on peaches. $20 - $6 = $14."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Cristine bought a dozen lemons and gave 1/4 of them to her neighbor. How many lemons does Cristine have left?",
+        "solution": "Cristine bought 12 lemons, gave 3 to her neighbor, subtract 3 from 12 \n\nThe answer is 9"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "A store owner buys clothes wholesale and adds 80% to the wholesale price to set the retail price. The retail price of a pair of pants is $36. What is the wholesale price?",
+        "solution": "Wholesale price x 1.8 = 36\nDivide both sides by 1.8\nWholesale price = 20"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "A pie shop charges $5 for a slice of pie. They cut each whole pie into 4 slices. How much money will the pie shop make if they sell 9 pies?",
+        "solution": "9 pies x 4 slices per pie = 36 slices\n36 slices x $5 per slice = $180\n\nThe answer is $180"
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Trace has five shopping bags that weigh the same amount as Gordon\u2019s two shopping bags. One of Gordon\u2019s shopping bags weighs three pounds and the other weighs seven. Trace\u2019s shopping bags all weigh the same amount. How many pounds does one of Trace\u2019s bags weigh?",
+        "solution": "Gordon's bags total 3 + 7 = 10 pounds. Trace's bags total 10 / 5 = 2 pounds."
+    },
+    {
+        "dataset": "gsm8k",
+        "question": "Macey saves to buy herself a shirt that costs $3. She was able to save $1.50 already. How many weeks does she need to save for the remaining amount if she saves $0.50 per week?",
+        "solution": "Macey needs $3 - $1.50 = $1.50 remaining\n$1.50 / $0.50 = 3 weeks"
+    }
+]

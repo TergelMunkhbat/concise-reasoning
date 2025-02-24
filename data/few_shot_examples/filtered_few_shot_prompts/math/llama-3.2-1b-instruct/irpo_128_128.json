@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "math",
+        "question": "Find one-fourth of 6 times 8.",
+        "solution": "Step 1: Multiply 6 and 8 to get 48.\nStep 2: Divide 48 by 4 to get the answer.\n\nThe answer is 12."
+    },
+    {
+        "dataset": "math",
+        "question": "Sixteen is 64$\\%$ of what number?",
+        "solution": "Let $x$ be the unknown number. Set up the equation:\n16 = 0.64x\nDivide both sides of the equation by 0.64 to isolate x:\nx = 16 / 0.64\nx = 25\nThe answer is 25."
+    },
+    {
+        "dataset": "math",
+        "question": "If $|x-2|=p$, where $x<2$, then what is $x-p$ in terms of $p$?",
+        "solution": "Since $x<2$, we have $x-2<0$.\nThus, we can rewrite the equation as $-(x-2)=p$, or $x=2-p$.\nTherefore, $x-p = 2-p-p = \\boxed{2-2p}$."
+    },
+    {
+        "dataset": "math",
+        "question": "When a polynomial is divided by $2x^2 - 7x + 18,$ what are the possible degrees of the remainder?  Enter all the possible values, separated by commas.",
+        "solution": "## Step 1: Understand the division of polynomials\nWhen a polynomial is divided by another polynomial, the degree of the remainder must be less than the degree of the divisor.\n\n## Step 2: Determine the degree of the divisor\nThe degree of the divisor, $2x^2 - 7x + 18,$ is 2.\n\n## Step 3: List the possible degrees of the remainder\nThe possible degrees of the remainder are those less than 2, which are 0 and 1.\n\n## Step 4: Write down the possible degrees of the remainder\nThe possible degrees of the remainder are 0 and 1.\n\nThe final answer is: $\\boxed{0,1}$"
+    },
+    {
+        "dataset": "math",
+        "question": "The number $n$ is a prime number between 20 and 30. If you divide $n$ by 8, the remainder is 5. What is the value of $n$?",
+        "solution": "## Step 1: Determine the prime numbers between 20 and 30.\nThe prime numbers between 20 and 30 are 23 and 29.\n\n## Step 2: Test the remainder when dividing each prime number by 8.\nFor 23 divided by 8, the remainder is 7. For 29 divided by 8, the remainder is 5.\n\n## Step 3: Identify the prime number that has a remainder of 5 when divided by 8.\nBased on the remainder, the prime number n is 29.\n\nThe answer is 29."
+    },
+    {
+        "dataset": "math",
+        "question": "Find $\\tan Y$ in the right triangle shown below.\n\n[asy]\npair X,Y,Z;\nX = (0,0);\nY = (24,0);\nZ = (0,7);\ndraw(X--Y--Z--X);\ndraw(rightanglemark(Y,X,Z,23));\nlabel(\"$X$\",X,SW);\nlabel(\"$Y$\",Y,SE);\nlabel(\"$Z$\",Z,N);\nlabel(\"$25$\",(Y+Z)/2,NE);\nlabel(\"$24$\",Y/2,S);\n[/asy]",
+        "solution": "Step 1: To find $\\tan Y$ in the given right triangle, we can use the definition of tangent as the ratio of the opposite side to the adjacent side.\nStep 2: Looking at the right triangle, we see that the side opposite to angle $Y$ is $Z$ with length $7$, and the side adjacent to angle $Y$ is $X$ with length $24$.\nStep 3: Therefore, we can find $\\tan Y$ using the formula $\\tan Y = \\frac{opposite}{adjacent} = \\frac{7}{24}$.\n\nThe answer is $\\frac{7}{24}$."
+    },
+    {
+        "dataset": "math",
+        "question": "If $\\|\\mathbf{v}\\| = 4,$ then find $\\mathbf{v} \\cdot \\mathbf{v}.$",
+        "solution": "## Step 1: Recall the definition of the dot product\nThe dot product of a vector with itself is equal to the square of its magnitude.\n\n## Step 2: Write the equation using the definition\n$\\mathbf{v} \\cdot \\mathbf{v} = \\|\\mathbf{v}\\|^2$\n\n## Step 3: Substitute the given magnitude\n$\\mathbf{v} \\cdot \\mathbf{v} = 4^2$\n\n## Step 4: Calculate the value\n$\\mathbf{v} \\cdot \\mathbf{v} = 16$\n\n## Step 5: Write the final answer\nThe answer is 16."
+    },
+    {
+        "dataset": "math",
+        "question": "A circular dartboard is divided into regions with various central angles, as shown. The probability of a dart randomly landing in a particular region is $\\frac16$. What is the corresponding measure, in degrees, of the central angle of this section of the dartboard? [asy]\nunitsize(1.5cm);\ndefaultpen(linewidth(.7pt));\n\npair O=(0,0);\ndraw(Circle(O,1));\ndraw(dir(0)--O--dir(90));\ndraw(dir(150)--O--dir(225));\n[/asy]",
+        "solution": "## Step 1:  To find the measure of the central angle corresponding to the given probability of a dart randomly landing in a particular region, we need to understand the relationship between the probability and the central angle of the section of the dartboard.\n## Step 2:  The probability of the dart landing in a particular region is given as $\\frac{1}{6}$, which can also be expressed as $\\frac{1}{6} = \\frac{\\text{central angle}}{360^\\circ}$. This implies that the central angle we're looking for is equal to $360^\\circ \\cdot \\frac{1}{6}$.\n## Step 3:  To find the measure of the central angle, we can calculate $360^\\circ \\cdot \\frac{1}{6}$, which simplifies to $60^\\circ$.\n\nThe final answer is: $\\boxed{60}$"
+    }
+]

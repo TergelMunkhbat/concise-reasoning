@@ -1,0 +1,34 @@
+_target_: trainers.mr_trainer.MRTrainer
+
+# Training hyperparameters
+batch_size: 16
+grad_steps: 1
+
+# Dataset configuration
+dataset: "gsm8k"
+type: "best_reward"
+max_new_tokens: 512
+
+# Model configuration
+model_name: "llama-3.2-instruct-1b"
+model_path: "./models/llama-3.2-instruct-1b"
+
+# Training configuration
+learning_rate: 1e-5
+num_train_epochs: 1
+save_strategy: "epoch"
+bf16: true
+output_dir: "./models/trained"
+use_raw_output_dir: true
+
+# Generation configuration
+accelerate: true
+num_diverse_paths: 4
+do_sample: true
+temperature: 0.7
+top_k: 40
+top_p: 0.95
+
+# Expert iteration specific configs
+num_iterations: 4
+iteration_method: 'mr'

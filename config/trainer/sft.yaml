@@ -1,0 +1,22 @@
+_target_: trainers.sft_trainer.SFTTrainer
+
+# Training hyperparameters
+batch_size: 16
+grad_steps: 1
+
+# Dataset configuration
+dataset: "math"
+data_path: "./data/math/qwen2.5-3b-instruct/1024/0.7/40/0.95/16/irpo"
+type: "shortest"
+
+# Model configuration
+model_name: "qwen2.5-3b-instruct"
+model_path: "./models/qwen2.5-3b-instruct"
+
+# Training configuration
+learning_rate: 1e-5
+num_train_epochs: 1
+save_strategy: "epoch"
+bf16: true
+output_dir: "./models/trained"
+use_raw_output_dir: true

@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "math",
+        "question": "Find one-fourth of 6 times 8.",
+        "solution": "To find one-fourth of 6 times 8, we need to follow these steps:\n\n1. First, calculate 6 times 8.\n   \\[\n   6 \\times 8 = 48\n   \\]\n\n2. Next, find one-fourth of 48. This is done by dividing 48 by 4.\n   \\[\n   \\frac{48}{4} = 12\n   \\]\n\nSo, the answer is \\boxed{12}."
+    },
+    {
+        "dataset": "math",
+        "question": "Compute $54 \\times 46$ in your head.",
+        "solution": "To compute \\(54 \\times 46\\) in my head, I can use the difference of squares formula, which states \\( (a+b)(a-b) = a^2 - b^2 \\). Here, I can rewrite \\(54 \\times 46\\) as \\((50+4)(50-4)\\). So, \\(a = 50\\) and \\(b = 4\\). Using the formula, we get:\n\n\\[\n54 \\times 46 = (50 + 4)(50 - 4) = 50^2 - 4^2 = 2500 - 16 = 2484\n\\]\n\nTherefore, the answer is \\(\\boxed{2484}\\)."
+    },
+    {
+        "dataset": "math",
+        "question": "Sixteen is 64$\\%$ of what number?",
+        "solution": "To find the number that 16 is 64% of, we can set up the equation:\n\n\\[ 16 = 0.64 \\times x \\]\n\nwhere \\( x \\) is the number we are trying to find. To solve for \\( x \\), we need to isolate \\( x \\) on one side of the equation. We can do this by dividing both sides of the equation by 0.64:\n\n\\[ x = \\frac{16}{0.64} \\]\n\nNext, we perform the division:\n\n\\[ x = \\frac{16}{0.64} = \\frac{16 \\times 100}{0.64 \\times 100} = \\frac{1600}{64} = 25 \\]\n\nTherefore, the number is:\n\n\\[ \\boxed{25} \\]"
+    },
+    {
+        "dataset": "math",
+        "question": "A $\\textit{palindrome}$ is a number which reads the same forward as backward. For example, 343 and 1221 are palindromes. What is the least natural number that can be added to 40,305 to create a palindrome?",
+        "solution": "To find the least natural number that can be added to 40,305 to create a palindrome, we start by examining the number 40,305 and identifying the nearest palindromes.\n\nFirst, let's consider the number 40,305. The next palindrome greater than 40,305 is 40,404. We can verify this by noting that 40,404 reads the same forwards and backwards.\n\nNext, we calculate the difference between 40,404 and 40,305:\n\\[ 40,404 - 40,305 = 99 \\]\n\nTherefore, the least natural number that can be added to 40,305 to create a palindrome is \\(\\boxed{99}\\)."
+    },
+    {
+        "dataset": "math",
+        "question": "A section is cut out of a circular piece of paper having radius four inches, as shown. Points A and B are then glued together to form a right circular cone. What is the circumference of the base of the resulting cone? Express your answer in terms of $\\pi$.  (The $270^\\circ$ sector forms the cone.)\n\n[asy]import graph;\ndraw(Circle((0,0),42.4),linewidth(1));\ndraw((0,0)--(30,30),linewidth(2));\ndraw((0,0)--(30,-30),linewidth(2));\nlabel(\"$A$\",(30,30),E);\nlabel(\"$B$\",(30,-30),E);\nlabel(\"4''\",(15,15),NW);\ndraw((3,3)--(6,0));\ndraw((6,0)--(3,-3));\n\n[/asy]",
+        "solution": "To determine the circumference of the base of the resulting cone, we need to understand how the sector of the circle forms the cone. The arc length of the sector becomes the circumference of the base of the cone.\n\nThe original circle has a radius of 4 inches. The circumference of the full circle is given by:\n\\[ 2\\pi \\times 4 = 8\\pi \\text{ inches} \\]\n\nSince the sector is 270 degrees, which is \\(\\frac{3}{4}\\) of the full circle (360 degrees), the arc length of the sector is:\n\\[ \\frac{3}{4} \\times 8\\pi = 6\\pi \\text{ inches} \\]\n\nThis arc length becomes the circumference of the base of the cone. Therefore, the circumference of the base of the resulting cone is:\n\\[ \\boxed{6\\pi} \\]"
+    },
+    {
+        "dataset": "math",
+        "question": "If $\\|\\mathbf{v}\\| = 4,$ then find $\\mathbf{v} \\cdot \\mathbf{v}.$",
+        "solution": "To find \\(\\mathbf{v} \\cdot \\mathbf{v}\\) given that \\(\\|\\mathbf{v}\\| = 4\\), we can use the relationship between the dot product of a vector with itself and the magnitude of the vector. The dot product of a vector \\(\\mathbf{v}\\) with itself is given by:\n\n\\[\n\\mathbf{v} \\cdot \\mathbf{v} = \\|\\mathbf{v}\\|^2\n\\]\n\nWe are given that \\(\\|\\mathbf{v}\\| = 4\\). Therefore, we can substitute this value into the equation:\n\n\\[\n\\mathbf{v} \\cdot \\mathbf{v} = 4^2 = 16\n\\]\n\nThus, the value of \\(\\mathbf{v} \\cdot \\mathbf{v}\\) is \\(\\boxed{16}\\)."
+    },
+    {
+        "dataset": "math",
+        "question": "A circular dartboard is divided into regions with various central angles, as shown. The probability of a dart randomly landing in a particular region is $\\frac16$. What is the corresponding measure, in degrees, of the central angle of this section of the dartboard? [asy]\nunitsize(1.5cm);\ndefaultpen(linewidth(.7pt));\n\npair O=(0,0);\ndraw(Circle(O,1));\ndraw(dir(0)--O--dir(90));\ndraw(dir(150)--O--dir(225));\n[/asy]",
+        "solution": "To determine the measure of the central angle corresponding to the section of the dartboard where the probability of landing a dart is \\(\\frac{1}{6}\\), we start by understanding that the probability of landing in a particular region is proportional to the central angle of that region. The total central angle of a circle is \\(360^\\circ\\).\n\nGiven that the probability of landing in a particular region is \\(\\frac{1}{6}\\), this means that the central angle of that region is \\(\\frac{1}{6}\\) of the total central angle of the circle. Therefore, we can calculate the central angle of this region as follows:\n\n\\[\n\\text{Central angle} = \\frac{1}{6} \\times 360^\\circ = 60^\\circ\n\\]\n\nThus, the measure of the central angle of this section of the dartboard is \\(\\boxed{60}\\)."
+    },
+    {
+        "dataset": "math",
+        "question": "When a polynomial is divided by $2x^2 - 7x + 18,$ what are the possible degrees of the remainder?  Enter all the possible values, separated by commas.",
+        "solution": "When a polynomial \\( P(x) \\) is divided by another polynomial \\( D(x) \\), the division algorithm tells us that we can write:\n\n\\[ P(x) = Q(x)D(x) + R(x) \\]\n\nwhere \\( Q(x) \\) is the quotient and \\( R(x) \\) is the remainder. The degree of the remainder \\( R(x) \\) must be less than the degree of the divisor \\( D(x) \\). In this problem, the divisor is \\( 2x^2 - 7x + 18 \\), which is a polynomial of degree 2. Therefore, the degree of the remainder must be less than 2. This means the possible degrees of the remainder are 1 or 0 (or the remainder could be the zero polynomial, which is considered to have a degree of \\(-\\infty\\) or undefined, but for practical purposes, we can consider it as having a degree of 0).\n\nThus, the possible degrees of the remainder are:\n\n\\[\n\\boxed{0, 1}\n\\]"
+    }
+]

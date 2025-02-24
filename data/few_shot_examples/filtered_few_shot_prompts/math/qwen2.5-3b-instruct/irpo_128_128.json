@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "math",
+        "question": "Find one-fourth of 6 times 8.",
+        "solution": "To find one-fourth of 6 times 8, we need to follow these steps:\n\n1. First, calculate 6 times 8:\n   - 6 * 8 = 48\n\n2. Next, find one-fourth of this result:\n   - To do this, divide 48 by 4:\n     48 / 4 = 12\n\nTherefore, the answer is The answer is 12"
+    },
+    {
+        "dataset": "math",
+        "question": "Sixteen is 64$\\%$ of what number?",
+        "solution": "To solve this problem, we need to understand that \"sixteen is 64% of a certain number\" translates to an equation where 16 is equal to 64% (or 0.64 in decimal form) of that unknown number. Let's denote the unknown number as \\( x \\). Thus, the equation becomes:\n\n\\[ 16 = 0.64x \\]\n\nOur goal is to solve for \\( x \\). To do this, we'll divide both sides of the equation by 0.64:\n\n\\[ x = \\frac{16}{0.64} \\]\n\nNow, let's perform the division:\n\n\\[ x = \\frac{16}{0.64} = 25 \\]\n\nTherefore, the answer is The answer is 25."
+    },
+    {
+        "dataset": "math",
+        "question": "What is $\\frac{1}{4}\\%$ of 120? Express your answer as a decimal.",
+        "solution": "To find what \\(\\frac{1}{4}\\%\\) of 120 is expressed as a decimal, we can follow these steps:\n\nStep 1: Convert the percentage to a decimal.\n\\(\\frac{1}{4}\\%\\) means one-fourth of one percent. One percent (\\(1\\%\\)) is equivalent to \\(0.01\\). Therefore,\n\\[\n\\frac{1}{4}\\% = \\frac{1}{4} \\times 0.01 = 0.0025\n\\]\n\nStep 2: Multiply the decimal by the number given (120).\nNow we need to find \\(0.0025\\) of \\(120\\), which is calculated as:\n\\[\n0.0025 \\times 120 = 0.3\n\\]\n\nTherefore, the answer is The answer is 0.3"
+    },
+    {
+        "dataset": "math",
+        "question": "The number $n$ is a prime number between 20 and 30. If you divide $n$ by 8, the remainder is 5. What is the value of $n$?",
+        "solution": "To solve this problem, let's break it down into steps:\n\n1. Identify the prime numbers between 20 and 30:\n   - The prime numbers in this range are 23 and 29.\n\n2. We need to check which of these primes, when divided by 8, leaves a remainder of 5.\n   - For 23, we calculate \\(23 \\div 8 = 2\\) with a remainder of 7.\n   - For 29, we calculate \\(29 \\div 8 = 3\\) with a remainder of 5.\n\n3. From the above calculations, we see that 29 satisfies the condition (remainder is 5) for division by 8.\n\nTherefore, the value of \\( n \\) is 29.\n\nThe answer is 29"
+    },
+    {
+        "dataset": "math",
+        "question": "Evaluate\n\\[\\begin{vmatrix} 0 & \\sin \\alpha & -\\cos \\alpha \\\\ -\\sin \\alpha & 0 & \\sin \\beta \\\\ \\cos \\alpha & -\\sin \\beta & 0 \\end{vmatrix}.\\]",
+        "solution": "To evaluate the determinant of the given \\(3 \\times 3\\) matrix:\n\n\\[\n\\begin{vmatrix} \n0 & \\sin \\alpha & -\\cos \\alpha \\\\ \n-\\sin \\alpha & 0 & \\sin \\beta \\\\ \n\\cos \\alpha & -\\sin \\beta & 0 \n\\end{vmatrix},\n\\]\n\nwe can follow these steps:\n\n1. **Recognize the pattern**: The given matrix is a skew-symmetric matrix (i.e., \\(A = -A^T\\)). For any skew-symmetric matrix of odd order, its determinant is always zero.\n\n2. **Apply the property of skew-symmetric matrices**: For a \\(3 \\times 3\\) skew-symmetric matrix, the determinant is given by:\n   \\[\n   \\text{det}(A) = 0.\n   \\]\n\nSince we have identified that the given matrix fits the definition of a skew-symmetric matrix, we can directly apply this property.\n\nThus, the determinant of the given matrix is:\nThe answer is 0."
+    },
+    {
+        "dataset": "math",
+        "question": "When a polynomial is divided by $2x^2 - 7x + 18,$ what are the possible degrees of the remainder?  Enter all the possible values, separated by commas.",
+        "solution": "To determine the possible degrees of the remainder when a polynomial \\( P(x) \\) is divided by another polynomial \\( D(x) = 2x^2 - 7x + 18 \\), we need to understand the relationship between these polynomials in terms of division.\n\nWhen dividing a polynomial \\( P(x) \\) by another polynomial \\( D(x) \\), according to polynomial division theory, the degree of the remainder \\( R(x) \\) must be less than the degree of the divisor \\( D(x) \\).\n\nGiven:\n- The divisor \\( D(x) = 2x^2 - 7x + 18 \\) has a degree of 2 (since the highest power of \\( x \\) in this polynomial is \\( x^2 \\)).\n\nTherefore, the degree of the remainder \\( R(x) \\) must satisfy:\n\\[ \\deg(R(x)) < \\deg(D(x)) \\]\n\\[ \\deg(R(x)) < 2 \\]\n\nThis implies that the possible degrees for \\( R(x) \\) are 0 or 1 (as any degree greater than or equal to 2 would not be less than the degree of the divisor).\n\nThe answer is 0, 1"
+    },
+    {
+        "dataset": "math",
+        "question": "A circular dartboard is divided into regions with various central angles, as shown. The probability of a dart randomly landing in a particular region is $\\frac16$. What is the corresponding measure, in degrees, of the central angle of this section of the dartboard? [asy]\nunitsize(1.5cm);\ndefaultpen(linewidth(.7pt));\n\npair O=(0,0);\ndraw(Circle(O,1));\ndraw(dir(0)--O--dir(90));\ndraw(dir(150)--O--dir(225));\n[/asy]",
+        "solution": "To solve this problem, let's break it down step-by-step:\n\n1. **Understanding the Dartboard and Probability**: \n   - A full circle has 360 degrees.\n   - The probability of landing in a specific region is given as \\(\\frac{1}{6}\\).\n\n2. **Relating Probability to Central Angle**:\n   - The probability of landing in a particular region corresponds to the fraction of the total circle that region occupies.\n   - If the probability is \\(\\frac{1}{6}\\), then the fraction of the circle (in degrees) that represents this region is also \\(\\frac{1}{6}\\) of the full circle.\n\n3. **Calculating the Central Angle**:\n   - To find the degree measure of the central angle for the region, we multiply the fraction \\(\\frac{1}{6}\\) by the total degrees in a circle (360 degrees).\n   - Calculation: \\(360 \\times \\frac{1}{6} = 60\\) degrees\n\nTherefore, the central angle of the section of the dartboard where the probability of landing is \\(\\frac{1}{6}\\) is 60 degrees.\n\nThe answer is 60 degrees"
+    },
+    {
+        "dataset": "math",
+        "question": "A solid box is 15 cm by 10 cm by 8 cm. A new solid is formed by removing a cube 3 cm on a side from each corner of this box. What percent of the original volume is removed?",
+        "solution": "To solve this problem, we need to follow several steps:\n\n1. **Calculate the volume of the original solid box**:\n   - The dimensions of the original box are 15 cm x 10 cm x 8 cm.\n   - Volume = length \u00d7 width \u00d7 height\n   - Volume = 15 cm \u00d7 10 cm \u00d7 8 cm = 1200 cubic cm\n\n2. **Determine the volume of the removed cubes**:\n   - Each cube removed has a side length of 3 cm.\n   - Volume of one cube = side^3\n   - Volume of one cube = 3 cm \u00d7 3 cm \u00d7 3 cm = 27 cubic cm\n   - Since there's a cube removed from each of the 8 corners of the box, the total volume removed = 8 \u00d7 27 cubic cm = 216 cubic cm\n\n3. **Calculate the percentage of the original volume that is removed**:\n   - Percentage removed = (Volume removed / Original Volume) \u00d7 100%\n   - Percentage removed = (216 cubic cm / 1200 cubic cm) \u00d7 100% = 18%\n\nTherefore, The answer is 18%."
+    }
+]
