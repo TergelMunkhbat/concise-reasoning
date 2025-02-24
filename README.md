@@ -36,8 +36,8 @@ The pipeline expects the following directory structure:
 - DeepSeek Math (7B)
 
 ### Datasets
-- GSM8K: Grade-school math word problems
-- MATH: Competition-level mathematics problems
+- GSM8K
+- MATH
 
 ## Training Pipeline
 
@@ -53,7 +53,7 @@ Our training pipeline (`training_pipeline.sh`) supports two primary training mod
 3. Run the training pipeline:
 
 ```bash
-TRAINING_TYPE="augmented" ZERO_SHOT_PROMPT_SYSTEM="irpo:16" FEW_SHOT_PROMPT_SYSTEM="gpt4o:16" ./training_pipeline.sh
+TRAINING_TYPE="augmented" ZERO_SHOT_PROMPT_SYSTEM="irpo:16" FEW_SHOT_PROMPT_SYSTEM="gpt4o:16" ./src/scripts/training_pipeline.sh
 ```
 
 This command will:

@@ -20,7 +20,7 @@
 
 
 # Environment settings
-CUDA_DEVICES="4,5,6,7"
+CUDA_DEVICES="0,1,2,3"
 export CUDA_VISIBLE_DEVICES="${CUDA_DEVICES}"
 
 # Base paths
@@ -59,16 +59,16 @@ declare -a datasets=(
 
 # Training type - single option
 # Options: "simple" or "augmented"
-TRAINING_TYPE="augmented"
+TRAINING_TYPE=${TRAINING_TYPE:-"augmented"} 
 
 # Simple training type - choose one approach
 # Options: "zero-shot" or "few-shot"
-SIMPLE_APPROACH="zero-shot"  
+SIMPLE_APPROACH=${SIMPLE_APPROACH:-"zero-shot"} 
 
 # Generation configurations - with diverse path counts
 # Format: "method_type:number_of_diverse_path"
-ZERO_SHOT_PROMPT_SYSTEM="irpo:16"
-FEW_SHOT_PROMPT_SYSTEM="gpt4o:16"
+ZERO_SHOT_PROMPT_SYSTEM=${ZERO_SHOT_PROMPT_SYSTEM:-"irpo:16"}
+FEW_SHOT_PROMPT_SYSTEM=${FEW_SHOT_PROMPT_SYSTEM:-"gpt4o:16"}
 
 # Training configurations
 # Used for trainer type (shortest or all)
@@ -155,10 +155,8 @@ run_generation() {
         log_message "Found existing data in ${GENERATED_DATA_PATH}, skipping generation"
         return 0
     else
-        # Run the command and capture its output while also displaying it in real-time
-        log_message "Running command: $cmd"
         
-                        # Create log file directory if it doesn't exist
+        # Create log file directory if it doesn't exist
         mkdir -p "$(dirname "$LOG_DIR/generation/${prompt_type}_${prompt_system}_${dataset}_${model_name}.txt")"
         
         # Run the command and tee output to both terminal and log file
