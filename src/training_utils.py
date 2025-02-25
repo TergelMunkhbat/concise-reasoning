@@ -9,8 +9,9 @@ from vllm import LLM, SamplingParams
 from tqdm import tqdm
 
 from prompt import SYSTEM_PROMPT_IRPO, SYSTEM_PROMPT_CONCISE, SYSTEM_PROMPT_COMPACT
+from prompt import SYSTEM_PROMPT_BUDGET_ESTIMATION, SYSTEM_PROMPT_FIXED_BUDGET
 from prompt import SYSTEM_PROMPT_SUMMARY, SYSTEM_PROMPT_SHORT, SYSTEM_PROMPT_SHORT2
-from prompt import ZERO_SHOT_PROMPT
+from prompt import ZERO_SHOT_PROMPT, ZERO_SHOT_BUDGET_ESTIMATION_PROMPT
         
         
 def tokenize_function(inputs, tokenizer, batch_size, device) -> list:
@@ -118,6 +119,8 @@ def format_zero_shot_prompt(example: dict, system_style: str, model_name: str) -
     system_prompt = {
         "irpo": SYSTEM_PROMPT_IRPO,
         "concise": SYSTEM_PROMPT_CONCISE,
+        "budget_estimation": SYSTEM_PROMPT_BUDGET_ESTIMATION,
+        "fixed_budget": SYSTEM_PROMPT_FIXED_BUDGET,
         "hand1": SYSTEM_PROMPT_SUMMARY,
         "hand2": SYSTEM_PROMPT_COMPACT,
         "hand3": SYSTEM_PROMPT_SHORT,
@@ -125,7 +128,10 @@ def format_zero_shot_prompt(example: dict, system_style: str, model_name: str) -
     }.get(system_style)
     
     # Format the user message
-    user_message = ZERO_SHOT_PROMPT.format(question=example["input"])
+    if system_style == "budget_estimation":
+        user_message = ZERO_SHOT_BUDGET_ESTIMATION_PROMPT.format(question=example["input"])
+    else:
+        user_message = ZERO_SHOT_PROMPT.format(question=example["input"])
     
     # Create messages in chat format
     if "gemma" in model_name:
@@ -139,6 +145,37 @@ def format_zero_shot_prompt(example: dict, system_style: str, model_name: str) -
             {"role": "user", "content": user_message}
         ]
     
+    return {'messages': messages}
+
+
+def format_zero_shot_est_budget_prompt(example: dict, model_name: str) -> dict:
+    """
+    Format the example using model chat template with token limit.
+    
+    Parameters:
+        example (dict): Dictionary containing input.
+        system_style (str): Style of system prompt to use
+        token_limit (int): Maximum number of tokens to generate
+    
+    Returns:
+        dict: Formatted input.
+    """
+    max_tokens = example["budget_estimate"]
+    system_prompt = f"Let's think step by step and use less than {max_tokens} tokens."
+    
+    user_message = ZERO_SHOT_PROMPT.format(question=example["input"])
+    
+    # Create messages in chat format
+    if model_name == "gemma-2-2b-it":
+        user_message = system_prompt + "\n\n" + user_message
+        messages = [
+            {"role": "user", "content": user_message}
+        ]
+    else:
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_message}
+        ]
     return {'messages': messages}
 
 

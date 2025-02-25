@@ -7,7 +7,7 @@ from accelerate.utils import InitProcessGroupKwargs
 from transformers import AutoTokenizer
 
 from dataset import GSM8kDatasetLoader, MATHDatasetLoader
-from training_utils import format_zero_shot_prompt, format_few_shot_prompt, generate_responses, get_generator
+from training_utils import format_zero_shot_prompt, format_zero_shot_est_budget_prompt, format_few_shot_prompt, generate_responses, get_generator
 from math_parser import compare_answers
 from utils import convert_to_json
 from model import load_model, load_model_with_flash_attention, get_latest_checkpoint
@@ -30,20 +30,30 @@ def evaluate(args) -> None:
         raise ValueError(f"Unsupported dataset: '{args.dataset}'. Please specify a valid dataset.")
     
     # Load and format dataset
-    datasets = dataset_loader.load_from_json()
-    datasets = datasets['test']
+    if args.prompt_system == "estimated_budget":
+        datasets = dataset_loader.load_from_json_manual_file(args.estimated_budget_data_path)
+        datasets = datasets['test']
+    else: 
+        datasets = dataset_loader.load_from_json()
+        datasets = datasets['test']
     
     # Format according to type
     if args.prompt != "direct":
         if args.prompt == "zero-shot":
-            datasets = datasets.map(lambda x: format_zero_shot_prompt(x, args.prompt_system, args.model_name))
+            if args.prompt_system == "estimated_budget":
+                datasets =  datasets.map(lambda x: format_zero_shot_est_budget_prompt(x, args.model_name))
+            else:
+                datasets = datasets.map(lambda x: format_zero_shot_prompt(x, args.prompt_system, args.model_name))
         elif args.prompt == "few-shot":
             datasets = datasets.map(lambda x: format_few_shot_prompt(x, args.few_shot_path))
         else:
             raise ValueError(f"Unsupported prompt: '{args.prompt}. Please specify a valid prompt type.")
 
     # Create output directory
-    output_dir = f"data/{args.dataset}/{args.model_name}/results"
+    if args.prompt_system == "budget_estimation":
+        output_dir = f"data/{args.dataset}/{args.model_name}/results/budget_estimation"
+    else:
+        output_dir = f"data/{args.dataset}/{args.model_name}/results"
     os.makedirs(output_dir, exist_ok=True)
     
     # Get the appropriate generator function if using vLLM
@@ -163,9 +173,11 @@ if __name__ == "__main__":
     parser.add_argument("--model_name", type=str, required=True, help="Model name")
     parser.add_argument("--dataset", type=str, required=True, help="Dataset to use for generation (e.g., 'gsm8k').")
     parser.add_argument("--prompt", type=str, required=True, choices=["direct", "zero-shot", "few-shot"], help="Prompt type to use.")
-    parser.add_argument("--prompt_system", type=str, default="irpo", choices=["irpo", "concise", "hand1", "hand2", "hand3", "hand4", "no"], 
+    parser.add_argument("--prompt_system", type=str, default="irpo", choices=["irpo", "concise", "budget_estimation", "estimated_budget", "fixed_budget", 
+                                                                              "hand1", "hand2", "hand3", "hand4", "no"], 
                         help="Style of system prompt to use for evaluation")
     parser.add_argument("--few_shot_path", type=str, help="Path to the exemplar file for few-shot prompting")
+    parser.add_argument("--estimated_budget_data_path", type=str, help="Path to the estimated budget data file")
     parser.add_argument("--max_new_tokens", type=int, default=512, help="Maximum number of new tokens to generate.")
     parser.add_argument("--batch_size", type=int, default=1, help="Batch size for generation.")
     parser.add_argument("--accelerate", action="store_true", help="Whether to use distributed generation.")

@@ -26,6 +26,7 @@ declare -a model_configs=(
 declare -a zero_shot_prompt_systems=(
     "irpo"
     "concise"
+    "fixed_budget"
     "hand1"
     "hand2"
     "hand3"

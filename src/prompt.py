@@ -4,6 +4,12 @@ SYSTEM_PROMPT_IRPO = """Your task is to answer the question below. Give step by 
 # A system be concise prompt (Renze and Guven, 2024)
 SYSTEM_PROMPT_CONCISE = """Your task is to answer the question below. Give step by step reasoning before you answer, and when you’re ready to answer, please use the format 'The answer is'. Be concise."""
 
+# A system prompt for budget estimation (Han et al., 2024)
+SYSTEM_PROMPT_BUDGET_ESTIMATION = """Task: Analyze the given question and estimate the minimum number of tokens required to generate a complete and accurate response. Please give the response by strictly following this format: [[budget]], for example, Budget: [[12]]."""
+
+# A system prompt for fixed budget (Nayab et al., 2024)
+SYSTEM_PROMPT_FIXED_BUDGET = """Let’s think a bit step by step and limit the answer length to 100 words."""
+
 # A system Hand Crafted 1 (ours)
 SYSTEM_PROMPT_SUMMARY = """Your task is to answer the question below. Give step by step reasoning before you answer, and when you’re ready to answer, please use the format 'The answer is'. You don’t need unnecessary explanations; you can solve problems using only essential words and expressions. Summarize your thought process as simply as possible and provide your answer. Do not generate only the final answer."""
 
@@ -19,6 +25,9 @@ SYSTEM_PROMPT_SHORT2 = """Your task is to answer the question below. Carefully s
 # A zero-shot user prompt
 ZERO_SHOT_PROMPT = """Question: {question}
 Solution:"""
+
+# A zero-shot user prompt for budget estimation
+ZERO_SHOT_BUDGET_ESTIMATION_PROMPT = """Question: {question}"""
 
 # LLaMa chat template
 LLAMA_CHAT_TEMPLATE = """{{- bos_token }}
