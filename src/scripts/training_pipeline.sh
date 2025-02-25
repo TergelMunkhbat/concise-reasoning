@@ -42,18 +42,18 @@ FEW_SHOT_DATA_PATH=""
 # Model configurations
 # Format: "model_name:batch_size"
 declare -a model_configs=(
-    "llama-3.2-1b-instruct:64"
+    #"llama-3.2-1b-instruct:64"
     "llama-3.2-3b-instruct:32"
-    "qwen2.5-math-1.5b-instruct:32"
-    "qwen2.5-3b-instruct:32"
-    "gemma-2-2b-it:32"
-    "llama-3.1-8b-instruct:32"
-    "deepseek-math-7b-instruct:32"
+    #"qwen2.5-math-1.5b-instruct:32"
+    #"qwen2.5-3b-instruct:32"
+    #"gemma-2-2b-it:32"
+    #"llama-3.1-8b-instruct:32"
+    #"deepseek-math-7b-instruct:32"
 )
 
 # Dataset configurations
 declare -a datasets=(
-    "gsm8k"
+    #"gsm8k"
     "math"
 )
 
@@ -235,8 +235,8 @@ run_evaluation() {
     
     mkdir -p "$(dirname "$LOG_DIR/evaluation/$(basename "$(dirname "$ckpt_dir")").txt")"
     
-    # Use direct evaluation with accelerate
-    accelerate launch src/evaluation.py \
+    # Run with vLLM
+    python src/evaluation.py \
         --model_path "$ckpt_dir" \
         --model_name "$model_name" \
         --dataset "$dataset" \
@@ -244,7 +244,7 @@ run_evaluation() {
         --prompt_system no \
         --max_new_tokens "$max_new_tokens" \
         --batch_size "$batch_size" \
-        --accelerate 2>&1 | tee "$LOG_DIR/evaluation/$(basename "$(dirname "$ckpt_dir")")_${dataset}.txt"
+        --use_vllm 2>&1 | tee "$LOG_DIR/evaluation/$(basename "$(dirname "$ckpt_dir")")_${dataset}.txt"
     
     eval_result=$?
     log_message "Evaluation completed with exit code: $eval_result"

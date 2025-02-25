@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Environment settings
-CUDA_DEVICES="4,5,6,7"
+CUDA_DEVICES="0,1,2,3"
 export CUDA_VISIBLE_DEVICES="${CUDA_DEVICES}"
 
 # Base paths
@@ -50,28 +50,6 @@ declare -a prompt_types=(
     "few-shot"
     "zero-shot"
 )
-
-# Function to check if a port is available
-check_port() {
-    local port=$1
-    nc -z localhost $port >/dev/null 2>&1
-    [ $? -ne 0 ]
-}
-
-# Function to get a random available port
-get_random_port() {
-    local min_port=29000
-    local max_port=32000
-    local port
-    
-    while true; do
-        port=$(shuf -i $min_port-$max_port -n 1)
-        if check_port $port; then
-            echo $port
-            return 0
-        fi
-    done
-}
 
 # Create log directory
 mkdir -p "$LOG_DIR"
@@ -136,19 +114,15 @@ for prompt_type in "${prompt_types[@]}"; do
                 ((current++))
                 log_message "Starting combination $current/$total_combinations"
                 log_message "Prompt Type: $prompt_type, Prompt System Key: $prompt_system_key, Dataset: $dataset, Model: $model_name"
-                
-                # Get random port
-                PORT=$(get_random_port)
-                log_message "Using port: $PORT"
 
                 # Set base command
-                cmd="accelerate launch --main_process_port $PORT src/evaluation.py \
+                cmd="python src/evaluation.py \
                     --model_path \"$model_path\" \
                     --model_name \"$model_name\" \
                     --dataset \"$dataset\" \
                     --prompt \"$prompt_type\" \
                     --batch_size \"$batch_size\" \
-                    --accelerate"
+                    --use_vllm"
 
                 # Add prompt system for zero-shot
                 if [ "$prompt_type" = "zero-shot" ]; then

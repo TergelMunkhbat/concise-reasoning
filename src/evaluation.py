@@ -4,12 +4,13 @@ import argparse
 from datetime import timedelta
 from accelerate import Accelerator
 from accelerate.utils import InitProcessGroupKwargs
+from transformers import AutoTokenizer
 
 from dataset import GSM8kDatasetLoader, MATHDatasetLoader
-from training_utils import format_zero_shot_prompt, format_few_shot_prompt, generate_responses
+from training_utils import format_zero_shot_prompt, format_few_shot_prompt, generate_responses, get_generator
 from math_parser import compare_answers
 from utils import convert_to_json
-from model import load_model, load_model_with_flash_attention
+from model import load_model, load_model_with_flash_attention, get_latest_checkpoint
 from prompt import LLAMA_CHAT_TEMPLATE
 
 
@@ -44,21 +45,34 @@ def evaluate(args) -> None:
     # Create output directory
     output_dir = f"data/{args.dataset}/{args.model_name}/results"
     os.makedirs(output_dir, exist_ok=True)
+    
+    # Get the appropriate generator function if using vLLM
+    generator_fn = None
+    if args.use_vllm:
+        generator_fn = get_generator(args)
+    
+    # Load model and tokenizer if not using vLLM
+    model = None
+    tokenizer = None
+    accelerator = None
 
     # Load model and tokenier
-    accelerator = None
-    if args.accelerate:
-        kwargs = InitProcessGroupKwargs(timeout=timedelta(seconds=36000))
-        accelerator = Accelerator(kwargs_handlers=[kwargs])
-        if args.flash_attention:
-            model, tokenizer = load_model_with_flash_attention(args.model_path, {"": accelerator.process_index})
+    if not args.use_vllm:
+        if args.accelerate:
+            kwargs = InitProcessGroupKwargs(timeout=timedelta(seconds=36000))
+            accelerator = Accelerator(kwargs_handlers=[kwargs])
+            if args.flash_attention:
+                model, tokenizer = load_model_with_flash_attention(args.model_path, {"": accelerator.process_index})
+            else:
+                model, tokenizer = load_model(args.model_path, {"": accelerator.process_index})
         else:
-            model, tokenizer = load_model(args.model_path, {"": accelerator.process_index})
+            if args.flash_attention:
+                model, tokenizer = load_model_with_flash_attention(args.model_path, "auto")
+            else:
+                model, tokenizer = load_model(args.model_path, "auto")
     else:
-        if args.flash_attention:
-            model, tokenizer = load_model_with_flash_attention(args.model_path, "auto")
-        else:
-            model, tokenizer = load_model(args.model_path, "auto")
+        args.model_path = get_latest_checkpoint(args.model_path)
+        tokenizer = AutoTokenizer.from_pretrained(args.model_path)
         
     # Format prompts based on whether using direct input or chat template
     def format_prompt(example):
@@ -82,6 +96,12 @@ def evaluate(args) -> None:
                     tokenize=False,
                     add_generation_prompt=True
                 )
+        
+        if args.use_vllm:    
+            # Remove bos token if it exists at the start for vllm
+            if tokenizer.bos_token and formatted_prompt.startswith(tokenizer.bos_token):
+                formatted_prompt = formatted_prompt[len(tokenizer.bos_token):]
+        
         return {"prompt": formatted_prompt}
     
     datasets = datasets.map(format_prompt)
@@ -94,7 +114,14 @@ def evaluate(args) -> None:
     args.top_k = None
     args.do_sample = False
 
-    outputs, output_token_counts = generate_responses(datasets, model, tokenizer, args, accelerator)
+    if args.use_vllm:
+        outputs, output_token_counts = generator_fn(
+            args.model_path,
+            datasets["prompt"],
+            args
+        )
+    else:
+        outputs, output_token_counts = generate_responses(datasets, model, tokenizer, args, accelerator)
 
     # Save to JSON
     if not args.accelerate or (args.accelerate and accelerator.is_main_process):
@@ -143,6 +170,7 @@ if __name__ == "__main__":
     parser.add_argument("--batch_size", type=int, default=1, help="Batch size for generation.")
     parser.add_argument("--accelerate", action="store_true", help="Whether to use distributed generation.")
     parser.add_argument("--flash_attention", action="store_true", help="Whether to use flash attention.")
+    parser.add_argument("--use_vllm", action="store_true", help="Whether to use vLLM for generation.")
     args = parser.parse_args()
 
     evaluate(args)
