@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Environment settings
-CUDA_DEVICES="4,5,6,7"
+CUDA_DEVICES="0,1,2,3"
 export CUDA_VISIBLE_DEVICES="${CUDA_DEVICES}"
 
 # Base paths
@@ -74,7 +74,6 @@ combine_training_data() {
 
     # Create temporary directories for combined data
     mkdir -p "${temp_output_dir}/train"
-    mkdir -p "${temp_output_dir}/valid"
 
     # Base paths
     local base_path="${BASE_DATA_DIR}/${dataset}/${base_type}/${model_name}"
@@ -97,11 +96,6 @@ combine_training_data() {
                 cp "$file" "${temp_output_dir}/train/extra_${filename}"
             fi
         done
-    fi
-
-    # For validation, only copy from base directory
-    if [ -d "${base_path}/valid" ]; then
-        cp "${base_path}/valid"/* "${temp_output_dir}/valid/"
     fi
 
     echo "${temp_output_dir}"

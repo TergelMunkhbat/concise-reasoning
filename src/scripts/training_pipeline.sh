@@ -431,7 +431,6 @@ for dataset in "${datasets[@]}"; do
             temp_dir="${TEMP_DIR}/${model_name}_${dataset}_${zero_shot_system}_${few_shot_system}"
             rm -rf "$temp_dir"
             mkdir -p "${temp_dir}/train"
-            mkdir -p "${temp_dir}/valid"
             
             # Combine the data
             log_message "Combining data from $ZERO_SHOT_DATA_PATH and $FEW_SHOT_DATA_PATH"
@@ -452,11 +451,6 @@ for dataset in "${datasets[@]}"; do
                         cp "$file" "${temp_dir}/train/few_$(basename "$file")"
                     fi
                 done
-            fi
-            
-            # Copy validation data (from zero-shot)
-            if [ -d "${ZERO_SHOT_DATA_PATH}/valid" ]; then
-                cp "${ZERO_SHOT_DATA_PATH}/valid"/*.json "${temp_dir}/valid/" 2>/dev/null || true
             fi
             
             # Define output directory for augmented training
