@@ -211,7 +211,7 @@ run_training() {
         trainer.batch_size=$batch_size \
         trainer.grad_steps=$grad_steps \
         trainer.use_raw_output_dir=True \
-        2>&1 | tee "$LOG_DIR/training/$(basename "$output_dir").txt"
+        2>&1 | tee "$LOG_DIR/training/$(basename "$output_dir")_${dataset}.txt"
     
     training_result=$?
     log_message "Training completed with exit code: $training_result"
@@ -244,7 +244,7 @@ run_evaluation() {
         --prompt_system no \
         --max_new_tokens "$max_new_tokens" \
         --batch_size "$batch_size" \
-        --accelerate 2>&1 | tee "$LOG_DIR/evaluation/$(basename "$(dirname "$ckpt_dir")").txt"
+        --accelerate 2>&1 | tee "$LOG_DIR/evaluation/$(basename "$(dirname "$ckpt_dir")")_${dataset}.txt"
     
     eval_result=$?
     log_message "Evaluation completed with exit code: $eval_result"
