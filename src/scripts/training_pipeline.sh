@@ -31,9 +31,6 @@ BASE_OUTPUT_DIR="./models/trained"
 LOG_DIR="logs"
 TEMP_DIR="/tmp/hybrid_training"
 
-# Add main process port for accelerate
-MAIN_PROCESS_PORT=${MAIN_PROCESS_PORT:-29501}
-
 # Global variables to store data paths
 GENERATED_DATA_PATH=""
 ZERO_SHOT_DATA_PATH=""
@@ -42,18 +39,18 @@ FEW_SHOT_DATA_PATH=""
 # Model configurations
 # Format: "model_name:batch_size"
 declare -a model_configs=(
-    #"llama-3.2-1b-instruct:64"
+    "llama-3.2-1b-instruct:64"
     "llama-3.2-3b-instruct:32"
-    #"qwen2.5-math-1.5b-instruct:32"
-    #"qwen2.5-3b-instruct:32"
-    #"gemma-2-2b-it:32"
-    #"llama-3.1-8b-instruct:32"
-    #"deepseek-math-7b-instruct:32"
+    "qwen2.5-math-1.5b-instruct:32"
+    "qwen2.5-3b-instruct:32"
+    "gemma-2-2b-it:32"
+    "llama-3.1-8b-instruct:32"
+    "deepseek-math-7b-instruct:32"
 )
 
 # Dataset configurations
 declare -a datasets=(
-    #"gsm8k"
+    "gsm8k"
     "math"
 )
 

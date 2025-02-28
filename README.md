@@ -1,6 +1,6 @@
 # Self-Training Elicits Concise Reasoning in Large Language Models
 
-Official repository for the paper "Self-Training Elicits Concise Reasoning in Large Language Models," by Tergel Munkhbat, Namgyu Ho, Seo Hyun Kim, Yongjin Yang, Yujin Kim, and Se-Young Yun.
+Official repository for the paper [Self-Training Elicits Concise Reasoning in Large Language Models](https://arxiv.org/abs/2502.20122) by Tergel Munkhbat, Namgyu Ho, Seo Hyun Kim, Yongjin Yang, Yujin Kim, and Se-Young Yun.
 
 ## Environment Setup
 
@@ -90,7 +90,7 @@ You can modify the following parameters in the script:
 If you find our work useful, please consider citing our paper:
 
 ```bibtex
-@article{munkhbat2024selftraining,
+@article{munkhbat2025selftraining,
   title={Self-Training Elicits Concise Reasoning in Large Language Models},
   author={Munkhbat, Tergel and Ho, Namgyu and Kim, Seo Hyun and Yang, Yongjin and Kim, Yujin and Yun, Se-Young},
   journal={},
