@@ -90,10 +90,10 @@ You can modify the following parameters in the script:
 If you find our work useful, please consider citing our paper:
 
 ```bibtex
-@article{munkhbat2025selftraining,
+@article{munkhbat2025self,
   title={Self-Training Elicits Concise Reasoning in Large Language Models},
-  author={Munkhbat, Tergel and Ho, Namgyu and Kim, Seo Hyun and Yang, Yongjin and Kim, Yujin and Yun, Se-Young},
-  journal={},
+  author={Munkhbat, Tergel and Ho, Namgyu and Kim, Seohyun and Yang, Yongjin and Kim, Yujin and Yun, Se-Young},
+  journal={arXiv preprint arXiv:2502.20122},
   year={2025}
 }
 ```
