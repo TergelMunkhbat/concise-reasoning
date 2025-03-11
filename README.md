@@ -2,6 +2,36 @@
 
 Official repository for the paper [Self-Training Elicits Concise Reasoning in Large Language Models](https://arxiv.org/abs/2502.20122) by Tergel Munkhbat, Namgyu Ho, Seo Hyun Kim, Yongjin Yang, Yujin Kim, and Se-Young Yun.
 
+## Demo
+
+Try our models directly in the browser with our [HuggingFace Space demo](https://huggingface.co/spaces/tergel/concise-reasoning-demo).
+
+### Available Fine-tuned Models
+
+We provide all the fine-tuned models for concise reasoning on GSM8K and MATH:
+
+- **LLaMA-3.2 Models**:
+  - [llama-3.2-3b-instruct-gsm8k-fs-gpt4o-bon](https://huggingface.co/tergel/llama-3.2-3b-instruct-gsm8k-fs-gpt4o-bon)
+  - [llama-3.2-3b-instruct-math-fs-gpt4o-bon](https://huggingface.co/tergel/llama-3.2-3b-instruct-math-fs-gpt4o-bon)
+
+- **Qwen2.5 Models**:
+  - [qwen2.5-3b-instruct-gsm8k-fs-gpt4o-bon](https://huggingface.co/tergel/qwen2.5-3b-instruct-gsm8k-fs-gpt4o-bon)
+  - [qwen2.5-3b-instruct-math-fs-gpt4o-bon](https://huggingface.co/tergel/qwen2.5-3b-instruct-math-fs-gpt4o-bon)
+  - [qwen2.5-math-1.5b-instruct-gsm8k-fs-gpt4o-bon](https://huggingface.co/tergel/qwen2.5-math-1.5b-instruct-gsm8k-fs-gpt4o-bon)
+  - [qwen2.5-math-1.5b-instruct-math-fs-gpt4o-bon](https://huggingface.co/tergel/qwen2.5-math-1.5b-instruct-math-fs-gpt4o-bon)
+
+- **Gemma-2 Models**:
+  - [gemma-2-2b-it-gsm8k-fs-gpt4o-bon](https://huggingface.co/tergel/gemma-2-2b-it-gsm8k-fs-gpt4o-bon)
+  - [gemma-2-2b-it-math-fs-gpt4o-bon](https://huggingface.co/tergel/gemma-2-2b-it-math-fs-gpt4o-bon)
+
+- **DeepSeek Models**:
+  - [deepseek-math-7b-instruct-gsm8k-fs-gpt4o-bon](https://huggingface.co/tergel/deepseek-math-7b-instruct-gsm8k-fs-gpt4o-bon)
+  - [deepseek-math-7b-instruct-math-fs-gpt4o-bon](https://huggingface.co/tergel/deepseek-math-7b-instruct-math-fs-gpt4o-bon)
+
+### Local Gradio Demo
+
+We also provide a Gradio interface for running our models locally. See the [gradio_demo](gradio_demo/) directory for instructions.
+
 ## Environment Setup
 
 1. Setup Conda environment:
@@ -49,7 +79,7 @@ Our training pipeline (`training_pipeline.sh`) supports two primary training mod
 ## Reproducing Paper Results
 
 1. Clone the repository
-2. Download the pre-trained models and place them in the `models/` directory:
+2. Download the original pre-trained models and place them in the `models/` directory:
 3. Run the training pipeline:
 
 ```bash
