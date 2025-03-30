@@ -244,6 +244,17 @@ def parse_answer(string, type) -> str:
     if type == "gsm8k":
         # Find all numeric values in the string using regular expression
         string = [s for s in re.findall(r'-?\d+\.?\d*', string)]
+    elif type == "mmlu-pro":
+        # pattern that captures just the letter
+        pattern1 = r'(?:^|\s|[(\[])([A-J])(?:\)|\.|\s|$)'
+        pattern2 = r'\\boxed{([A-J])}'
+        pattern3 = r'\*\*([A-J])(?:\.\s|\*\*)'
+        
+        # Try both patterns and combine results
+        matches1 = re.findall(pattern1, string)
+        matches2 = re.findall(pattern2, string)
+        matches3 = re.findall(pattern3, string)
+        string = matches1 + matches2 + matches3
 
     # If there are no candidates in the list, set string to an empty string
     if len(string) == 0:

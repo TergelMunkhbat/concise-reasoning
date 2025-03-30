@@ -6,7 +6,7 @@ from accelerate import Accelerator
 from accelerate.utils import InitProcessGroupKwargs
 from transformers import AutoTokenizer
 
-from dataset import GSM8kDatasetLoader, MATHDatasetLoader
+from dataset import GSM8kDatasetLoader, MATHDatasetLoader, MMLUProDatasetLoader
 from training_utils import format_zero_shot_prompt, format_zero_shot_est_budget_prompt, format_few_shot_prompt, generate_responses, get_generator
 from math_parser import compare_answers
 from utils import convert_to_json
@@ -26,6 +26,8 @@ def evaluate(args) -> None:
         dataset_loader = GSM8kDatasetLoader()
     elif args.dataset == 'math':
         dataset_loader = MATHDatasetLoader(model_name=args.model_name)
+    elif args.dataset == 'mmlu-pro':
+        dataset_loader = MMLUProDatasetLoader()
     else:
         raise ValueError(f"Unsupported dataset: '{args.dataset}'. Please specify a valid dataset.")
     
@@ -36,6 +38,14 @@ def evaluate(args) -> None:
     else: 
         datasets = dataset_loader.load_from_json()
         datasets = datasets['test']
+        
+    # Filter MMLU-Pro for only math, business, and physics subjects
+    if args.dataset == 'mmlu-pro':
+        selected_subjects = ['math', 'business', 'physics']
+        datasets = datasets.filter(lambda x: x['category'] in selected_subjects)
+        
+        print(f"Filtered MMLU-Pro dataset to include only {', '.join(selected_subjects)} subjects.")
+        print(f"Number of examples after filtering: {len(datasets)}")
     
     # Format according to type
     if args.prompt != "direct":

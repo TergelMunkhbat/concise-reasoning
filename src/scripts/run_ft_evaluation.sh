@@ -32,7 +32,7 @@ MODEL_NAME=$(get_model_name "$LOWER_PATH")
 echo "Model Name: $MODEL_NAME"
 
 # Set max tokens based on dataset type
-if [ "$DATASET_TYPE" = "math" ]; then
+if [ "$DATASET_TYPE" = "math" ] || [ "$DATASET_TYPE" = "mmlu-pro" ]; then
     MAX_TOKENS=1024
 else
     MAX_TOKENS=512

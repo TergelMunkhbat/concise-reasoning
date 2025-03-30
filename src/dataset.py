@@ -52,8 +52,15 @@ class DatasetLoader:
         Returns:
             dict: Loaded datasets.
         """
+        # Configure the full path
+        if self.dataset_name == 'mmlu-pro':
+            dataset_name = 'TIGER-Lab/MMLU-Pro'
+        else:
+            # Use the original dataset name
+            dataset_name = self.dataset_name
+        
         # Load dataset with specifed version, if not provided, load the latest version
-        datasets = load_dataset(self.dataset_name, self.dataset_version) if self.dataset_version else load_dataset(self.dataset_name)
+        datasets = load_dataset(dataset_name, self.dataset_version) if self.dataset_version else load_dataset(dataset_name)
         return datasets
     
     def load_from_json(self) -> dict:
@@ -522,6 +529,91 @@ class MATHDatasetLoader(DatasetLoader):
                 datasets['dataset'].append(item['dataset'])
         
         return datasets
+
+
+class MMLUProDatasetLoader(DatasetLoader):
+    """
+    Class for loading and processing the MMLUPro dataset.
+    """
+
+    def __init__(self, dataset_name='mmlu-pro', dataset_version='default', has_valid=True, 
+                 split_map={'valid': 'validation', 'test': 'test'}) -> None:
+        """
+        Initialize MMLUProDatasetLoader object.
+
+        Parameters:
+            dataset_name (str): Name of the dataset
+            dataset_version (str): Version of the dataset
+            has_valid (bool): Indicates if the dataset has a validation set.
+            split_map (dict): Mapping of splits to train and test
+        """
+        super().__init__(dataset_name, dataset_version, has_valid, split_map)
+    
+    def load_from_json(self) -> dict:
+        """
+        Load dataset from JSON files.
+
+        Returns:
+            dict: Loaded datasets.
+        """
+        # Define data files - MMLU-Pro only has validation and test splits
+        data_files = {
+            "valid": f'{self.data_root}/{self.dataset_name}/{self.dataset_name}_valid.json',
+            "test": f'{self.data_root}/{self.dataset_name}/{self.dataset_name}_test.json'
+        }
+        
+        # Load dataset from JSON files and post-process
+        datasets = load_dataset('json', data_files=data_files)
+        datasets = self._post_process(datasets)
+        
+        return datasets
+    
+    def _post_process(self, datasets) -> None:
+        """
+        Perform post-processing on loaded datasets.
+
+        Parameters:
+            datasets (dict): Loaded datasets.
+        
+        Returns:
+            dict: Processed datasets.
+        """
+        def prepare_input(example) -> dict:
+            """
+            Prepare input examples.
+
+            Parameters:
+                example (dict): Dictionary containing 'question' and 'answer' keys.
+                idx (int): index for the example.
+
+            Returns:
+                dict: Processed example with 'input' and 'label' keys.
+            """
+            question = example['question']
+            options = example['options']
+            answer = example['answer']
+            id = example['question_id']
+            
+            # Format options with letters A through J
+            option_letters = "ABCDEFGHIJ"
+            formatted_options = "\n".join([f"{option_letters[i]}. {option}" for i, option in enumerate(options)])
+            
+            # Combine question and formatted options
+            formatted_input = f"{question}\n{formatted_options}"
+            
+            example['input'] = formatted_input
+            example['label'] = answer
+            example['dataset'] = 'mmlu-pro'
+            example['_id'] = str(id)
+
+            return example
+        
+        # Map prepare_input function to each example in the dataset
+        datasets = datasets.map(prepare_input)
+        # Remove unnecessary columns
+        datasets = datasets.remove_columns(['question', 'answer', 'options', 'question_id'])
+
+        return datasets
     
         
 if __name__ == "__main__":
@@ -532,6 +624,8 @@ if __name__ == "__main__":
     # Check if the dataset is supported
     if args.dataset == 'gsm8k':
         dataset_loader = GSM8kDatasetLoader()
+    elif args.dataset == 'mmlu-pro':
+        dataset_loader = MMLUProDatasetLoader()
     else:
         raise ValueError(f"Unsupported dataset: '{args.dataset}'. Please specify a valid dataset.")
     

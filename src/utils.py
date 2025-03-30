@@ -246,14 +246,6 @@ def normalize_model_name(model_name: str) -> str:
     if not model_family:
         raise ValueError(f"Unsupported model family. Model name must start with one of: {list(SUPPORTED_FAMILIES.keys())}")
     
-    # Validate model sizes
-    if 'math' in name:
-        if not any(size in name for size in ['1.5b', '7b']):
-            raise ValueError("Invalid model size for math-specific model")
-    else:
-        if not any(size in name for size in ['1b', '2b', '3b', '7b', '8b']):
-            raise ValueError("Invalid model size")
-    
     # Validate instruction format
     if not any(suffix in name for suffix in ['instruct', 'it']):
         raise ValueError("Model must be an instruction-tuned variant (ending in 'instruct' or 'it')")
