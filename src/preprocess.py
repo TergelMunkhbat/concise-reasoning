@@ -36,7 +36,7 @@ def filter_rationales(data, dataset, max_tokens, min_tokens=0, only_correct=True
     # Step 1: Filter by correctness
     correctness_filtered = []
     if only_correct:
-        if dataset == "gsm8k":
+        if dataset == "gsm8k" or dataset.startswith('mmlu-pro-'):
             correctness_filtered = [item for item in data if item['answer'] == item['label']]
         elif dataset == "math":
             correctness_filtered = [
@@ -126,7 +126,7 @@ def preprocess(args) -> None:
     """Preprocess rationales from JSON files."""
     if args.dataset == "gsm8k":
         max_tokens = 512
-    elif args.dataset == "math":
+    elif args.dataset == "math" or args.dataset.startswith('mmlu-pro-'):
         max_tokens = 1024
 
     data_dir = Path(args.data_dir)
@@ -137,13 +137,13 @@ def preprocess(args) -> None:
 
     all_data = [item for file in data_dir.glob('*.json') for item in process_file(file)]
     
-    filtered_correct = filter_rationales(all_data, args.dataset, max_tokens)
+    filtered_correct = filter_rationales(all_data, args.dataset, max_tokens-1)
     save_filtered_rationales(filtered_correct, dir_path=output_dir)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Script for preprocessing rationales")
     parser.add_argument("--data_dir", type=str, required=True, help="Path to the directory containing JSON files.")
-    parser.add_argument("--dataset", type=str, required=True, choices=["gsm8k", "math"], help="Dataset to preprocess rationales for.")
+    parser.add_argument("--dataset", type=str, required=True, help="Dataset to preprocess rationales for.")
     args = parser.parse_args()
 
     preprocess(args)

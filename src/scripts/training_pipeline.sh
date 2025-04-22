@@ -52,6 +52,10 @@ declare -a model_configs=(
 declare -a datasets=(
     "gsm8k"
     "math"
+    "mmlu-pro-business"
+    "mmlu-pro-physics"
+    "mmlu-pro-chemistry"
+    "mmlu-pro-math"
 )
 
 # Training type - single option
@@ -117,7 +121,7 @@ run_generation() {
     
     # Set max_new_tokens based on dataset
     local max_new_tokens=512
-    if [ "$dataset" = "math" ]; then
+    if [ "$dataset" = "math" ] || [[ "$dataset" == "mmlu-pro"* ]]; then
         max_new_tokens=1024
     fi
     
@@ -180,7 +184,7 @@ run_training() {
     # Set batch size and gradient steps based on dataset
     local batch_size=16
     local grad_steps=1
-    if [ "$dataset" = "math" ]; then
+    if [ "$dataset" = "math" ] || [[ "$dataset" == "mmlu-pro"* ]]; then
         batch_size=8
         grad_steps=2
     fi
@@ -224,7 +228,7 @@ run_evaluation() {
     
     # Set max_new_tokens based on dataset
     local max_new_tokens=512
-    if [ "$dataset" = "math" ]; then
+    if [ "$dataset" = "math" ] || [[ "$dataset" == "mmlu-pro"* ]]; then
         max_new_tokens=1024
     fi
     
@@ -241,7 +245,7 @@ run_evaluation() {
         --prompt_system no \
         --max_new_tokens "$max_new_tokens" \
         --batch_size "$batch_size" \
-        --use_vllm 2>&1 | tee "$LOG_DIR/evaluation/$(basename "$(dirname "$ckpt_dir")")_${dataset}.txt"
+        --use_vllm 2>&1 | tee "$LOG_DIR/evaluation/${model_name}_$(basename "$(dirname "$ckpt_dir")")_${dataset}.txt"
     
     eval_result=$?
     log_message "Evaluation completed with exit code: $eval_result"

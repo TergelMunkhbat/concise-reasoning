@@ -1,0 +1,42 @@
+[
+  {
+    "dataset": "mmlu-pro",
+    "question": "What is the effective rate of yield of a stock selling for $60 and paying an annual dividend of $2?\nA. 2(1/2)%\nB. 3(1/3)%\nC. 4%\nD. 5%",
+    "solution": "The price of the stock is $60. The annual dividend paid is $2. The yield of a stock is calculated by dividing the annual dividend by the stock's price. Divide 2 by 60 to get the yield. The result is 0.0333, or 3.33%. This matches option B, which is 3(1/3)%. The answer is B. 3(1/3)%."
+  },
+  {
+    "dataset": "mmlu-pro",
+    "question": "Suppose we are given the following information. Use this information to calculate abnormal return. Rf: 4%\nRm: 12%\nBeta of the Portfolio: 1.8\nBeginning Value of Portfolio: $50,000\nEnding Value of Portfolio: $60,000\nWhat is the abnormal return?\nA. 0.025\nB. 0.035\nC. 0.016\nD. 0.012\nE. 0.030\nF. 0.040\nG. 0.008\nH. 0.010\nI. 0.020\nJ. 0.050",
+    "solution": "1. Calculate the actual return of the portfolio: \n   - Ending Value = $60,000\n   - Beginning Value = $50,000\n   - Actual Return = (Ending Value - Beginning Value) / Beginning Value = ($60,000 - $50,000) / $50,000 = $10,000 / $50,000 = 0.20 or 20%\n\n2. Calculate the expected return of the portfolio using the Capital Asset Pricing Model (CAPM):\n   - Risk-free rate, Rf = 4% or 0.04\n   - Market return, Rm = 12% or 0.12\n   - Beta (\u03b2) of the portfolio = 1.8\n   - Expected Return = Rf + \u03b2(Rm - Rf) = 0.04 + 1.8(0.12 - 0.04) = 0.04 + 1.8(0.08) = 0.04 + 0.144 = 0.184 or 18.4%\n\n3. Calculate the abnormal return:\n   - Abnormal Return = Actual Return - Expected Return = 0.20 - 0.184 = 0.016 or 1.6%\n\nThe answer is C. 0.016"
+  },
+  {
+    "dataset": "mmlu-pro",
+    "question": "A dress sells for $50.00. It has a percent markup of 40% based on the selling price. Find the markup in dollars.\nA. $12.50\nB. $17.50\nC. $40.00\nD. $10.00\nE. $15.00\nF. $25.00\nG. $20.00\nH. $22.50\nI. $30.00\nJ. $35.00",
+    "solution": "1. The selling price is $50.00.\n2. The percent markup based on the selling price is 40%.\n3. To find the markup in dollars, calculate 40% of the selling price.\n4. 40% of $50.00 is calculated as (40/100) * $50.00.\n5. Simplifying, it's 0.40 * $50.00 which equals $20.00.\n\nThe answer is G. $20.00."
+  },
+  {
+    "dataset": "mmlu-pro",
+    "question": "Let's assume that the 10-year annual return for the S&P 500 (market portfolio) is 10%, while the average annual return on Treasury bills (a good proxy for the risk-free rate) is 5%. Whats the market Treynor Ratio? Return the numeric value between 0 and 1.\nA. 0.08\nB. 0.25\nC. 0.15\nD. 0.5\nE. 0.4\nF. 0.1\nG. 0.2\nH. 0.05\nI. 0.3\nJ. 0.6",
+    "solution": "The Treynor Ratio is calculated using the formula: (Return of the Portfolio - Risk-Free Rate) / Beta of the Portfolio. For the market portfolio, the return is 10% and the risk-free rate is 5%. The beta of the market portfolio is 1. \n\nCalculate excess return: 10% - 5% = 5%. \n\nSince the beta is 1, the Treynor Ratio is: 5% / 1 = 0.05. \n\nThe numeric value between 0 and 1 is 0.05. \n\nThe answer is H. 0.05."
+  },
+  {
+    "dataset": "mmlu-pro",
+    "question": "An automobile that cost $3,000 four years ago is now worth $1,000. What is the average yearly depreciation?\nA. $300\nB. $2,000\nC. $250\nD. $1,000\nE. $800\nF. $400\nG. $500\nH. $600\nI. $750\nJ. $1,250",
+    "solution": "1. Start with the initial cost: $3,000.\n2. Determine current value: $1,000.\n3. Find total depreciation: Subtract current value from initial cost ($3,000 - $1,000 = $2,000).\n4. Determine the number of years over which depreciation occurred: 4 years.\n5. Calculate average yearly depreciation: Divide total depreciation by number of years ($2,000 / 4 = $500).\n\nThe answer is G. $500."
+  },
+  {
+    "dataset": "mmlu-pro",
+    "question": "________________reflect a purchaser's high level of involvement in the purchase decision. There is high perceived risk in these decisions so consumers spend a great deal of time, care, and energy searching, formulating, and making the final decision.\nA. Services.\nB. Perishable items.\nC. Impulse purchases.\nD. Non-durable goods.\nE. Discounted items.\nF. Fast-moving consumer goods.\nG. Durable goods.\nH. Generic products.\nI. Convenience products.",
+    "solution": "1. High involvement purchase decisions usually involve significant risk and cost.\n2. Consumers spend much time and energy evaluating these purchases.\n3. Options A, B, C, E, F, H, and I generally represent low involvement or low-risk purchases.\n4. Durable goods are typically high-cost items that last longer, which involves risk, leading to high involvement.\n5. Analyze option G: Durable goods fit the described consumer behavior and characteristics.\n\nThe answer is G. Durable goods."
+  },
+  {
+    "dataset": "mmlu-pro",
+    "question": "The Last National Bank has just approved a loan at an interest rate of 6% for 90 days. If the interest charge on the loan is $36, how much is the principal of the loan?\nA. $3000\nB. $2600\nC. $2200\nD. $2800\nE. $3200\nF. $2000\nG. $2100\nH. $1800\nI. $2500\nJ. $2400",
+    "solution": "First, understand the problem. You have a loan with a 6% annual interest rate, and the interest charge is $36. The loan is for 90 days.\n\nConvert the annual interest rate to the period of the loan:\n\nAnnual rate: 6%, which is 0.06 as a decimal.\n\nCalculate the interest rate for 90 days. There are about 365 days in a year, so the loan period in fraction of a year is 90/365.\n\nCalculate the effective interest rate for 90 days as: 0.06 * (90/365).\n\nInterest is given by the formula: Interest = Principal * Rate.\n\nYou know Interest is $36 and Rate is 0.06 * (90/365).\n\nNow solve for Principal:\n\n36 = Principal * (0.06 * (90/365)).\n\nCalculate the rate: 0.06 * (90/365) = 0.0147945.\n\nUse the rate to find Principal: 36 = Principal * 0.0147945.\n\nSolve for Principal: Principal = 36 / 0.0147945.\n\nPrincipal \u2248 2433.89.\n\nCompare this with the options. The closest answer is $2400.\n\nThe answer is J. $2400."
+  },
+  {
+    "dataset": "mmlu-pro",
+    "question": " Providing free samples of perfumes (scent) in magazines is an example of which of the following?\nA. Operant conditioning.\nB. Social learning.\nC. Insight learning.\nD. Observational learning.\nE. Cognitive learning.\nF. Classical conditioning.\nG. Sensory learning.\nH. Habituation.\nI. Latent learning.\nJ. Behavioural learning.",
+    "solution": "Giving free perfume samples in magazines is meant to associate the pleasant smell with the product. This uses a desired stimulus to encourage a positive reaction or behavior towards buying the product, similar to how a neutral stimulus is paired with an unconditioned stimulus to elicit a response in classical conditioning. Classical conditioning involves creating an association between a neutral stimulus and an unconditioned stimulus to produce a conditioned response. \n\nThe answer is F. Classical conditioning."
+  }
+]

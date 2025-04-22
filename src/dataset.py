@@ -537,7 +537,7 @@ class MMLUProDatasetLoader(DatasetLoader):
     """
 
     def __init__(self, dataset_name='mmlu-pro', dataset_version='default', has_valid=True, 
-                 split_map={'valid': 'validation', 'test': 'test'}) -> None:
+                 split_map={'valid': 'validation', 'test': 'test'}, category=None) -> None:
         """
         Initialize MMLUProDatasetLoader object.
 
@@ -548,6 +548,7 @@ class MMLUProDatasetLoader(DatasetLoader):
             split_map (dict): Mapping of splits to train and test
         """
         super().__init__(dataset_name, dataset_version, has_valid, split_map)
+        self.category = category
     
     def load_from_json(self) -> dict:
         """
@@ -556,6 +557,10 @@ class MMLUProDatasetLoader(DatasetLoader):
         Returns:
             dict: Loaded datasets.
         """
+        if self.category:
+            # Load category-specific dataset
+            return self.load_category_data()
+        
         # Define data files - MMLU-Pro only has validation and test splits
         data_files = {
             "valid": f'{self.data_root}/{self.dataset_name}/{self.dataset_name}_valid.json',
@@ -567,6 +572,26 @@ class MMLUProDatasetLoader(DatasetLoader):
         datasets = self._post_process(datasets)
         
         return datasets
+
+    def load_category_data(self) -> dict:
+        """
+        Load category-specific dataset.
+        
+        Returns:
+            dict: Loaded datasets with train and test splits.
+        """
+        # Define data files for the specific category
+        data_files = {
+            "train": f'{self.data_root}/{self.dataset_name}/{self.dataset_name}-{self.category}_train.json',
+            "test": f'{self.data_root}/{self.dataset_name}/{self.dataset_name}-{self.category}_test.json'
+        }
+        
+        # Load dataset from JSONL files
+        datasets = load_dataset('json', data_files=data_files)
+        datasets = self._post_process(datasets)
+        
+        return datasets
+        
     
     def _post_process(self, datasets) -> None:
         """
@@ -613,6 +638,50 @@ class MMLUProDatasetLoader(DatasetLoader):
         # Remove unnecessary columns
         datasets = datasets.remove_columns(['question', 'answer', 'options', 'question_id'])
 
+        return datasets
+    
+    def _select_llm_rationales(self, outputs, type, target_total):
+        """
+        Select language model rationales depending on the type.
+
+        Parameters:
+            outputs (list): List of language model outputs.
+            type (str): A type to select rationales.
+            target_total (int, optional): maximum number of samples to select.
+        
+        Returns:
+            dict: Selected datasets.
+        """
+        datasets = {
+            "input": [],
+            "label": [],
+            "length": [],
+            "gold": [],
+            "dataset": []
+        }
+
+        # Group data by input
+        grouped_data = defaultdict(list)
+        for item in outputs:
+            grouped_data[item['_id']].append(item)
+
+        if type == 'shortest':
+            final_data = self._select_shortest_rationales(grouped_data, target_total)
+        elif type == 'all':
+            final_data = self._select_all_rationales(grouped_data)
+        elif type == 'best_reward':
+            final_data = self._select_best_reward_rationales(grouped_data, target_total)
+        else:
+            raise ValueError(f"Unsupported type: '{type}'. Please specify a valid type.")
+        
+        for items in final_data.values():
+            for item in items:
+                datasets['input'].append(item['input'])
+                datasets['label'].append(item['rationale'])
+                datasets['length'].append(item['token_count'])
+                datasets['gold'].append(item['label'])
+                datasets['dataset'].append(item['dataset'])
+        
         return datasets
     
         

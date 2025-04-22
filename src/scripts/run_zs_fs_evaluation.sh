@@ -44,6 +44,10 @@ declare -a few_shot_prompt_systems=(
 declare -a datasets=(
     "gsm8k" 
     "math"
+    "mmlu-pro-business"
+    "mmlu-pro-physics"
+    "mmlu-pro-chemistry"
+    "mmlu-pro-math"
 )
 
 # Prompt types to run
@@ -145,7 +149,7 @@ for prompt_type in "${prompt_types[@]}"; do
                 fi
                 
                 # Set max_new_tokens based on dataset
-                if [ "$dataset" = "math" ]; then
+                if [ "$dataset" = "math" ] || [[ "$dataset" == "mmlu-pro"* ]]; then
                     cmd="$cmd --max_new_tokens 1024"
                 else
                     cmd="$cmd --max_new_tokens 512"

@@ -26,8 +26,9 @@ def evaluate(args) -> None:
         dataset_loader = GSM8kDatasetLoader()
     elif args.dataset == 'math':
         dataset_loader = MATHDatasetLoader(model_name=args.model_name)
-    elif args.dataset == 'mmlu-pro':
-        dataset_loader = MMLUProDatasetLoader()
+    elif args.dataset.startswith('mmlu-pro-'):
+        category = args.dataset[len('mmlu-pro-'):]
+        dataset_loader = MMLUProDatasetLoader(category=category)
     else:
         raise ValueError(f"Unsupported dataset: '{args.dataset}'. Please specify a valid dataset.")
     
@@ -38,14 +39,6 @@ def evaluate(args) -> None:
     else: 
         datasets = dataset_loader.load_from_json()
         datasets = datasets['test']
-        
-    # Filter MMLU-Pro for only math, business, and physics subjects
-    if args.dataset == 'mmlu-pro':
-        selected_subjects = ['math', 'business', 'physics']
-        datasets = datasets.filter(lambda x: x['category'] in selected_subjects)
-        
-        print(f"Filtered MMLU-Pro dataset to include only {', '.join(selected_subjects)} subjects.")
-        print(f"Number of examples after filtering: {len(datasets)}")
     
     # Format according to type
     if args.prompt != "direct":
@@ -183,8 +176,8 @@ if __name__ == "__main__":
     parser.add_argument("--model_name", type=str, required=True, help="Model name")
     parser.add_argument("--dataset", type=str, required=True, help="Dataset to use for generation (e.g., 'gsm8k').")
     parser.add_argument("--prompt", type=str, required=True, choices=["direct", "zero-shot", "few-shot"], help="Prompt type to use.")
-    parser.add_argument("--prompt_system", type=str, default="irpo", choices=["irpo", "concise", "budget_estimation", "estimated_budget", "fixed_budget", 
-                                                                              "hand1", "hand2", "hand3", "hand4", "no"], 
+    parser.add_argument("--prompt_system", type=str, default="irpo", choices=["irpo", "concise", "budget_estimation", "estimated_budget", 
+                        "fixed_budget", "hand1", "hand2", "hand3", "hand4", "no"], 
                         help="Style of system prompt to use for evaluation")
     parser.add_argument("--few_shot_path", type=str, help="Path to the exemplar file for few-shot prompting")
     parser.add_argument("--estimated_budget_data_path", type=str, help="Path to the estimated budget data file")

@@ -1,0 +1,42 @@
+[
+  {
+    "dataset": "mmlu-pro",
+    "question": "When n = 11, what is the value of 10 \u2013 (n + 6)?\nA. 3\nB. 0\nC. 5\nD. \u20137\nE. -5\nF. 1\nG. 27\nH. 7\nI. -3\nJ. 15",
+    "solution": "First, we replace n with 11 in the expression n + 6. So, n + 6 becomes 11 + 6. The sum of 11 and 6 is 17. Now, we evaluate the expression 10 - (n + 6). We have 10 - 17. The result of 10 - 17 is -7. Therefore, the answer is D, which is -7. \n\nThe answer is D."
+  },
+  {
+    "dataset": "mmlu-pro",
+    "question": "Which of the following statements about the correlation coefficient is true?\nA. A correlation of 1 indicates a perfect cause-and-effect relationship between the variables.\nB. A correlation of -1 indicates a perfect cause-and-effect relationship between the variables.\nC. The correlation coefficient is always less than 0.\nD. Correlation applies equally well to quantitative and categorical data.\nE. The correlation coefficient and the slope of the regression line are always equal.\nF. The correlation coefficient and the slope of the regression line may have opposite signs.\nG. Correlations of +0.87 and -0.87 indicate the same degree of clustering around the regression line.\nH. A correlation of 0 indicates a strong positive relationship between the variables.",
+    "solution": "A correlation coefficient measures the strength and direction of a linear relationship between two quantitative variables. A correlation of 1 or -1 indicates a perfect linear relationship, not a cause-and-effect relationship. The correlation coefficient ranges from -1 to 1. It is suitable for quantitative data, not categorical data. The slope of the regression line and the correlation can have opposite signs if the scales of the variables are different, but usually they have the same sign if variables are standardized. The degree of clustering, or strength, is determined by the absolute value of the correlation coefficient. Zero correlation does not imply a strong positive relationship; it indicates no linear relationship. Therefore, statement G is true because correlations +0.87 and -0.87 reflect the same clustering strength but opposite directions. The answer is G."
+  },
+  {
+    "dataset": "mmlu-pro",
+    "question": "Molly got a haircut for $25 and she left a 15% tip. What was Molly\u2019s final cost?\nA. $27.75\nB. $29.75\nC. $26.50 \nD. $27.50 \nE. $28.75 \nF. $30.25\nG. $25.15 \nH. $30.00\nI. $31.00\nJ. $28.50",
+    "solution": "1. The cost of the haircut is $25.\n2. The tip is 15% of $25.\n3. To find the tip, multiply $25 by 0.15.\n4. $25 \u00d7 0.15 = $3.75.\n5. Add the tip to the cost of the haircut: $25 + $3.75 = $28.75.\nThe answer is E. $28.75."
+  },
+  {
+    "dataset": "mmlu-pro",
+    "question": "Find acceleration in m/(min^2) at time t = 5 min of a helicopter whose height is s(t) = 300t - 4t^3 m.\nA. 100\nB. 240\nC. 180\nD. 150\nE. 60\nF. -200\nG. -60\nH. -120\nI. -180\nJ. -240",
+    "solution": "To find acceleration, we first need the second derivative of s(t). \n\n1. The given height function is s(t) = 300t - 4t^3.\n2. First, find the first derivative s'(t) which is velocity: \n   s'(t) = d/dt (300t - 4t^3) = 300 - 12t^2.\n3. Second, find the second derivative s''(t) which is acceleration:\n   s''(t) = d/dt (300 - 12t^2) = -24t.\n4. Evaluate the acceleration at t = 5 min: \n   s''(5) = -24(5) = -120 m/(min^2).\n\nThe answer is H. -120"
+  },
+  {
+    "dataset": "mmlu-pro",
+    "question": "The number of days it takes to build a new house has a variance of 386. A sample of 40 new homes shows an average building time of 83 days. With what confidence can we assert that the average building time for a new house is between 80 and 90 days?\nA. 75.3%\nB. 90.5%\nC. 68.9%\nD. 97.2%\nE. 82.1%\nF. 20.0%\nG. 85.7%\nH. 17.8%\nI. 78.4%\nJ. 15.4%",
+    "solution": "1. Given data: variance = 386, sample size (n) = 40, sample mean (x\u0304) = 83, population standard deviation (\u03c3) = \u221a386.\n\n2. Convert variance to standard deviation: \n   - \u03c3 = \u221a386 \u2248 19.64.\n\n3. Calculate standard error (SE) for the sample mean:\n   - SE = \u03c3 / \u221an = 19.64 / \u221a40 \u2248 3.107.\n\n4. Determine the z-scores for the given confidence interval limits (80 days and 90 days):\n   - Lower bound (80 days): z = (80 - 83) / SE = -3 / 3.107 \u2248 -0.965.\n   - Upper bound (90 days): z = (90 - 83) / SE = 7 / 3.107 \u2248 2.253.\n\n5. Refer to z-table for probabilities:\n   - Probability corresponding to z = -0.965 is approximately 0.167.\n   - Probability corresponding to z = 2.253 is approximately 0.987.\n\n6. Calculate the total probability (confidence level) that lies between these z-scores by subtracting:\n   - Confidence level = 0.987 - 0.167 = 0.820.\n\n7. Convert confidence level to percentage:\n   - 0.820 \u00d7 100% = 82.0%.\n\n8. The closest answer choice is 82.1%.\n\nThe answer is E. 82.1%"
+  },
+  {
+    "dataset": "mmlu-pro",
+    "question": "Gary has 72 cows on his farm. He has 6 times as many cows as he has horses. The number sentence below can be used to find the number of horses, h, he has. 72 \u00f7 h = 6 How many horses, h, does Gary have?\nA. 24 horses\nB. 48 horses\nC. 36 horses\nD. 60 horses\nE. 432 horses\nF. 18 horses\nG. 78 horses\nH. 66 horses\nI. 12 horses\nJ. 6 horses",
+    "solution": "The equation given is 72 \u00f7 h = 6. This means 72 divided by the number of horses equals 6. To find the number of horses, solve for h. Rearranging the equation gives h = 72 \u00f7 6. Calculate 72 divided by 6, which equals 12. Hence, the number of horses is 12. \n\nThe answer is I. 12 horses."
+  },
+  {
+    "dataset": "mmlu-pro",
+    "question": "A correlation of 0.6 indicates that the percentage of variation in y that is explained by the variation in x is how many times the percentage indicated by a correlation of 0.3?\nA. 2\nB. 4\nC. 8\nD. 6\nE. 2.5\nF. 3\nG. 1.5\nH. 0.5\nI. 0.2\nJ. 5",
+    "solution": "1. Correlation between x and y is 0.6. To find the explanation of variation, square this value: \\( 0.6^2 = 0.36 \\). This means 36% of y's variation is explained by x.\n2. Correlation between x and y is 0.3. Square this value: \\( 0.3^2 = 0.09 \\). This means 9% of y's variation is explained by x.\n3. Determine how many times 36% is compared to 9% by division: \\( 0.36 / 0.09 = 4 \\).\n\nThe answer is B. 4."
+  },
+  {
+    "dataset": "mmlu-pro",
+    "question": "All of Bella\u2019s photos are in 8 photo books. Each photo book has 25 photos. Which expression shows how to find the total number of photos Bella has?\nA. 25 \u00d7 8\nB. 8 + 25\nC. 25 + 25\nD. 25 \u00d7 25\nE. 8 \u2013 25\nF. 25 \u2013 8\nG. 25 + 8\nH. 8 \u00f7 25\nI. 25 \u00f7 8\nJ. 8 \u00d7 8",
+    "solution": "To find the total number of photos, we need to find the total number of photos in all the photo books. Each photo book holds 25 photos and there are 8 photo books. \n\nThe operation to find the total number of photos is multiplication, as we are combining equal groups of photos. Thus, we multiply the number of photos per book by the number of books.\n\nThe expression is 25 multiplied by 8, which calculates the total pictures in all 8 books.\n\nThe answer is A. 25 \u00d7 8"
+  }
+]

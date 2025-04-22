@@ -6,7 +6,7 @@ from transformers.trainer_utils import set_seed
 
 
 from model import load_model, load_model_with_flash_attention, DataCollatorForSupervisedDataset
-from dataset import GSM8kDatasetLoader, MATHDatasetLoader
+from dataset import GSM8kDatasetLoader, MATHDatasetLoader, MMLUProDatasetLoader
 
 
 IGNORE_INDEX = -100
@@ -113,6 +113,9 @@ class SFTTrainer:
             dataset_loader = GSM8kDatasetLoader()
         elif self.config.dataset == 'math':
             dataset_loader = MATHDatasetLoader()
+        elif self.config.dataset.startswith('mmlu-pro-'):
+            category = self.config.dataset[len('mmlu-pro-'):]
+            dataset_loader = MMLUProDatasetLoader(category=category)
         else:
             raise ValueError(f"Unsupported dataset: '{self.config.dataset}'")
     

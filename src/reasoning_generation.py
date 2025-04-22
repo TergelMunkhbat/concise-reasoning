@@ -7,7 +7,7 @@ from accelerate import Accelerator
 from accelerate.utils import InitProcessGroupKwargs
 from transformers import AutoTokenizer
 
-from dataset import GSM8kDatasetLoader, MATHDatasetLoader
+from dataset import GSM8kDatasetLoader, MATHDatasetLoader, MMLUProDatasetLoader
 from training_utils import format_zero_shot_prompt, generate_responses, format_few_shot_prompt, get_generator
 from utils import get_config_dir, convert_to_json
 from model import load_model, load_model_with_flash_attention
@@ -26,6 +26,9 @@ def generate(args) -> None:
         dataset_loader = GSM8kDatasetLoader()
     elif args.dataset == 'math':
         dataset_loader = MATHDatasetLoader(model_name=args.model_name)
+    elif args.dataset.startswith('mmlu-pro-'):
+        category = args.dataset[len('mmlu-pro-'):]
+        dataset_loader = MMLUProDatasetLoader(category=category)
     else:
         raise ValueError(f"Unsupported dataset: '{args.dataset}'. Please specify a valid dataset.")
     
